@@ -65,5 +65,5 @@ openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -sha256 -days 3
 ### Start HTTP-SERVER
 
 ```
-http-server --ssl key.pem
+http-server --ssl cert.pem
 ```
