@@ -8,7 +8,7 @@ https://nodejs.org/en/download/
 
 Debian Linux:
 ```
-sudo apt install npm
+sudo apt install nodejs
 ```
 
 
