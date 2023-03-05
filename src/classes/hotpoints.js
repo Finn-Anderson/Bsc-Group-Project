@@ -17,7 +17,8 @@ AFRAME.registerComponent('hotpoint', {
         var newPoints = this.data.points;
 
         this.setSky = function() {
-            console.log(1);
+            var sky = document.querySelector('#img-360');
+            sky.setAttribute("src", newSky);
         }
 
         this.getCurrentPoints = function() {
@@ -27,10 +28,13 @@ AFRAME.registerComponent('hotpoint', {
         this.setNewHotpoints = function() {
             console.log(1);
         }
+        this.el.addEventListener('click', this.setSky);
 
     },
     update: function() {},
-    remove: function() {}
+    remove: function() {
+    this.el.removeEventListener('click', this.setSky);
+    }
 })
 
 
