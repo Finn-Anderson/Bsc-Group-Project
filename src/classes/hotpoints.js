@@ -8,7 +8,7 @@
 AFRAME.registerComponent('hotpoint', {
     schema: {
         room:{type:"string",default:""},
-        points: {type:'string', default:""},
+        points: {type:"string", default:""},
     },
 
     init: function() {
@@ -21,39 +21,37 @@ AFRAME.registerComponent('hotpoint', {
             sky.setAttribute("src", newSky);
         }
 
-        this.getCurrentPoints = function() {
-            console.log(1);
+        this.setHidden = function() {
+            var current_hotpoint = this.parentElement.getAttribute("id");
+            var hotpoint = document.querySelector('#'+current_hotpoint);
+            hotpoint.setAttribute("scale","0 0 0");
+            console.log(current_hotpoint);
         }
 
-        this.setNewHotpoints = function() {
-            console.log(1);
+        this.setVisible = function() {
+            var newPoint = document.querySelector('#'+newPoints);
+            newPoint.setAttribute("scale","1 1 1");
+            // document.getElementById("#"+newPoints).hidden = false; newPoints.setAttribute("visible", "true");
         }
+
+        this.main = function() {
+            this.setHidden;
+            this.setSky;
+            this.setVisible;
+        }
+        // Clean up add signle addEventListener to main - 
         this.el.addEventListener('click', this.setSky);
+        this.el.addEventListener('click', this.setHidden);
+        this.el.addEventListener('click', this.setVisible);
 
     },
     update: function() {},
     remove: function() {
-    this.el.removeEventListener('click', this.setSky);
+        this.el.removeEventListener('click', this.setSky);
+        this.el.removeEventListener('click', this.setHidden);
+        this.el.removeEventListener('click', this.setVisible);
     }
 })
 
-
-
-AFRAME.registerComponent('hotpoints', {
-    schema: {},
-
-    init: function() {
-
-        this.setHidden = function() {
-            console.log(1);
-        }
-
-        this.setVisible = function() {
-            console.log(1);
-        }
-
-    },
-    update: function() {},
-    remove: function() {}
 })
 
