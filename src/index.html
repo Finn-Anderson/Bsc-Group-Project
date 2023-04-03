@@ -1,8 +1,8 @@
 
 <!--
-    Development build version: 0.1
-    Build date: 02/03/2023
-    Author: Bsc Team Project Group 2023
+	Development build version: 0.1
+	Build date: 02/03/2023
+	Author: Bsc Team Project Group 2023
 
 noscript
 
@@ -12,222 +12,153 @@ noscript
 <html>
   
   <head>
-    
-    <!-- META TAGS START-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- META TAGS END-->
+	
+	<!-- META TAGS START-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- META TAGS END-->
 
-    <!-- EXTERNAL JAVASCRIPT START -->
-    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-    <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
-    <script src="classes/hotpoints.js"></script>
-    <script src="classes/menu.js"></script>
-    <!-- EXTERNAL JAVASCRIPT END -->
+	<!-- EXTERNAL JAVASCRIPT START -->
+	<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+	<script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
+	<script src="classes/hotpoints.js"></script>
+	<script src="classes/menus.js"></script>
 
-    <!-- EXTERNAL CSS START -->
-    <link rel="stylesheet" href="css/style.css">
-    <!-- EXTERNAL CSS END -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+	<!-- EXTERNAL JAVASCRIPT END -->
+
+	<!-- EXTERNAL CSS START -->
+	<link rel="stylesheet" href="css/style.css">
+	<!-- EXTERNAL CSS END -->
 
   </head>
 
   <body>
-    
-    <div id="embeddedScene">
-        <a-scene embedded >
+	
+	<div id="embeddedScene">
+		<a-scene embedded >
 
-            <!-- ASSESTS START-->
+			<!-- ASSESTS START-->
 
-            <img id="hotpoint" src="img/Points/move_03.png"/> <!-- 600x600 PIXELS-->
-            <img id="informationpoint" src="#"/> <!-- 600x600 PIXELS-->
-            <img id="texture" src="img/Points/move_03.png">
+			<img id="hotpoint" src="img/Points/move_03.png"/> <!-- 600x600 PIXELS-->
+			<img id="informationpoint" src="#"/> <!-- 600x600 PIXELS-->
+			<img id="texture" src="img/Points/move_03.png">
 
-            <img id="Front-entranceRoom1" src="img/Front-Entrance/GS__0107.JPG">
-            <img id="Front-entranceRoom2" src="img/Front-Entrance/GS__0106.JPG">
-            <img id="Front-entranceRoom3" src="img/Front-Entrance/GS__0105.JPG">
-            <img id="Front-entranceRoom4" src="img/Front-Entrance/GS__0103.JPG">
-            <img id="Front-entranceRoom5" src="img/Front-Entrance/GS__0102.JPG">
-            <img id="Front-entranceRoom6" src="img/Front-Entrance/GS__0101.JPG">
+			<img id="Front-entranceRoom1" src="img/Front-Entrance/GS__0107.JPG">
+			<img id="Front-entranceRoom2" src="img/Front-Entrance/GS__0106.JPG">
+			<img id="Front-entranceRoom3" src="img/Front-Entrance/GS__0105.JPG">
+			<img id="Front-entranceRoom4" src="img/Front-Entrance/GS__0103.JPG">
+			<img id="Front-entranceRoom5" src="img/Front-Entrance/GS__0102.JPG">
+			<img id="Front-entranceRoom6" src="img/Front-Entrance/GS__0101.JPG">
 
-            <img id="Cafeteria-blockRoom1" src="img/Cafeteria/GS__0100.JPG"/>
-            <img id="Cafeteria-blockRoom2" src="img/Cafeteria/GS__0098.JPG"/> 
-            <img id="Cafeteria-blockRoom3" src="img/Cafeteria/GS__0097.JPG"/> 
-            <img id="Cafeteria-blockRoom4" src="img/Cafeteria/GS__0096.JPG"/> 
-            <img id="Cafeteria-blockRoom5" src="img/Cafeteria/GS__0095.JPG"/> 
-            <img id="Cafeteria-blockRoom6" src="img/Cafeteria/GS__0094.JPG"/> 
+			<img id="Cafeteria-blockRoom1" src="img/Cafeteria/GS__0100.JPG"/>
+			<img id="Cafeteria-blockRoom2" src="img/Cafeteria/GS__0098.JPG"/> 
+			<img id="Cafeteria-blockRoom3" src="img/Cafeteria/GS__0097.JPG"/> 
+			<img id="Cafeteria-blockRoom4" src="img/Cafeteria/GS__0096.JPG"/> 
+			<img id="Cafeteria-blockRoom5" src="img/Cafeteria/GS__0095.JPG"/> 
+			<img id="Cafeteria-blockRoom6" src="img/Cafeteria/GS__0094.JPG"/> 
  
-            <img id="B-blockBottomRoom1" src="img/B-Block-bottom/GS__0089.JPG"/>
-            <img id="B-blockBottomRoom2" src="img/B-Block-bottom/GS__0090.JPG"/>
-            <img id="B-blockBottomRoom3" src="img/B-Block-bottom/GS__0091.JPG"/>
-            <img id="B-blockBottomRoom4" src="img/B-Block-bottom/GS__0092.JPG"/>
-            <img id="B-blockBottomRoom5" src="img/B-Block-bottom/GS__0093.JPG"/>
+			<img id="B-blockBottomRoom1" src="img/B-Block-bottom/GS__0089.JPG"/>
+			<img id="B-blockBottomRoom2" src="img/B-Block-bottom/GS__0090.JPG"/>
+			<img id="B-blockBottomRoom3" src="img/B-Block-bottom/GS__0091.JPG"/>
+			<img id="B-blockBottomRoom4" src="img/B-Block-bottom/GS__0092.JPG"/>
+			<img id="B-blockBottomRoom5" src="img/B-Block-bottom/GS__0093.JPG"/>
 
-            <img id="B-blockBottomStairwayRoom1" src="img/B-Block-stairway/GS__0085.JPG"/>
-            <img id="B-blockBottomStairwayRoom2" src="img/B-Block-stairway/GS__0086.JPG"/>
-            <img id="B-blockBottomStairwayRoom3" src="img/B-Block-stairway/GS__0087.JPG"/>
-            <img id="B-blockBottomStairwayRoom4" src="img/B-Block-stairway/GS__0088.JPG"/>
+			<img id="B-blockBottomStairwayRoom1" src="img/B-Block-stairway/GS__0085.JPG"/>
+			<img id="B-blockBottomStairwayRoom2" src="img/B-Block-stairway/GS__0086.JPG"/>
+			<img id="B-blockBottomStairwayRoom3" src="img/B-Block-stairway/GS__0087.JPG"/>
+			<img id="B-blockBottomStairwayRoom4" src="img/B-Block-stairway/GS__0088.JPG"/>
 
-            <img id="B-blockTopRoom1" src="img/B-Block-top floor/GS__0049.JPG"/>
-            <img id="B-blockTopRoom2" src="img/B-Block-top floor/GS__0050.JPG"/>
-            <img id="B-blockTopRoom3" src="img/B-Block-top floor/GS__0051.JPG"/>
-            <img id="B-blockTopRoom4" src="img/B-Block-top floor/GS__0052.JPG"/>
-            <img id="B-blockTopRoom5" src="img/B-Block-top floor/GS__0053.JPG"/>
-            <img id="B-blockTopRoom5" src="img/B-Block-top floor/GS__0054.JPG"/>
-            <img id="B-blockTopRoom5" src="img/B-Block-top floor/GS__0055.JPG"/>
-            <img id="B-blockTopRoom5" src="img/B-Block-top floor/GS__0056.JPG"/>
-            <img id="B-blockTopRoom5" src="img/B-Block-top floor/GS__0057.JPG"/>
+			<img id="B-blockTopRoom1" src="img/B-Block-top floor/GS__0049.JPG"/>
+			<img id="B-blockTopRoom2" src="img/B-Block-top floor/GS__0050.JPG"/>
+			<img id="B-blockTopRoom3" src="img/B-Block-top floor/GS__0051.JPG"/>
+			<img id="B-blockTopRoom4" src="img/B-Block-top floor/GS__0052.JPG"/>
+			<img id="B-blockTopRoom5" src="img/B-Block-top floor/GS__0053.JPG"/>
+			<img id="B-blockTopRoom5" src="img/B-Block-top floor/GS__0054.JPG"/>
+			<img id="B-blockTopRoom5" src="img/B-Block-top floor/GS__0055.JPG"/>
+			<img id="B-blockTopRoom5" src="img/B-Block-top floor/GS__0056.JPG"/>
+			<img id="B-blockTopRoom5" src="img/B-Block-top floor/GS__0057.JPG"/>
 
-            <!-- NEEDS FIXED -->
-            <img id="AB-blockRoom1" src="img/AB-block-stairway/GS__0060.JPG"/>
-            <img id="AB-blockRoom2" src="img/AB-block-stairway/GS__0061.JPG"/>
-            <img id="AB-blockRoom3" src="img/AB-block-stairway/GS__0099.JPG"/>
-            <img id="AB-blockRoom4" src="img/AB-block-stairway/GS__0060.JPG"/>
-            <img id="AB-blockRoom5" src="img/AB-block-stairway/GS__0060.JPG"/>
-            <!---->
+			<!-- NEEDS FIXED -->
+			<img id="AB-blockRoom1" src="img/AB-block-stairway/GS__0060.JPG"/>
+			<img id="AB-blockRoom2" src="img/AB-block-stairway/GS__0061.JPG"/>
+			<img id="AB-blockRoom3" src="img/AB-block-stairway/GS__0099.JPG"/>
+			<img id="AB-blockRoom4" src="img/AB-block-stairway/GS__0060.JPG"/>
+			<img id="AB-blockRoom5" src="img/AB-block-stairway/GS__0060.JPG"/>
+			<!---->
 
-            <img id="A-blockStairwayRoom1" src="img/A-Block-stairway/GS__0083.JPG"/>
-            <img id="A-blockStairwayRoom2" src="img/A-Block-stairway/GS__0084.JPG"/>
-            <img id="A-blockStairwayRoom3" src="img/A-Block-stairway/GS__0038.JPG"/>
-            
-            <img id="ComputingDepartment-blockRoom1" src="img/Computing-Department/GS__0030.JPG"/>
-            <img id="ComputingDepartment-blockRoom2" src="img/Computing-Department/GS__0031.JPG"/>
-            <img id="ComputingDepartment-blockRoom3" src="img/Computing-Department/GS__0034.JPG"/>
-            <img id="ComputingDepartment-blockRoom4" src="img/Computing-Department/GS__0036.JPG"/>
-            <img id="ComputingDepartment-blockRoom5" src="img/Computing-Department/GS__0037.JPG"/>
-            <img id="ComputingDepartment-blockRoom6" src="img/Computing-Department/GS__0039.JPG"/>
-            <img id="ComputingDepartment-blockRoom7" src="img/Computing-Department/GS__0040.JPG"/>
-            <img id="ComputingDepartment-blockRoom8" src="img/Computing-Department/GS__0041.JPG"/>
-            <img id="ComputingDepartment-blockRoom9" src="img/Computing-Department/GS__0042.JPG"/>
-            <img id="ComputingDepartment-blockRoom10" src="img/Computing-Department/GS__0043.JPG"/>
-            <img id="ComputingDepartment-blockRoom11" src="img/Computing-Department/GS__0044.JPG"/>
-            <img id="ComputingDepartment-blockRoom12" src="img/Computing-Department/GS__0045.JPG"/>
-            <img id="ComputingDepartment-blockRoom13" src="img/Computing-Department/GS__0046.JPG"/>
+			<img id="A-blockStairwayRoom1" src="img/A-Block-stairway/GS__0083.JPG"/>
+			<img id="A-blockStairwayRoom2" src="img/A-Block-stairway/GS__0084.JPG"/>
+			<img id="A-blockStairwayRoom3" src="img/A-Block-stairway/GS__0038.JPG"/>
+			
+			<img id="ComputingDepartment-blockRoom1" src="img/Computing-Department/GS__0030.JPG"/>
+			<img id="ComputingDepartment-blockRoom2" src="img/Computing-Department/GS__0031.JPG"/>
+			<img id="ComputingDepartment-blockRoom3" src="img/Computing-Department/GS__0034.JPG"/>
+			<img id="ComputingDepartment-blockRoom4" src="img/Computing-Department/GS__0036.JPG"/>
+			<img id="ComputingDepartment-blockRoom5" src="img/Computing-Department/GS__0037.JPG"/>
+			<img id="ComputingDepartment-blockRoom6" src="img/Computing-Department/GS__0039.JPG"/>
+			<img id="ComputingDepartment-blockRoom7" src="img/Computing-Department/GS__0040.JPG"/>
+			<img id="ComputingDepartment-blockRoom8" src="img/Computing-Department/GS__0041.JPG"/>
+			<img id="ComputingDepartment-blockRoom9" src="img/Computing-Department/GS__0042.JPG"/>
+			<img id="ComputingDepartment-blockRoom10" src="img/Computing-Department/GS__0043.JPG"/>
+			<img id="ComputingDepartment-blockRoom11" src="img/Computing-Department/GS__0044.JPG"/>
+			<img id="ComputingDepartment-blockRoom12" src="img/Computing-Department/GS__0045.JPG"/>
+			<img id="ComputingDepartment-blockRoom13" src="img/Computing-Department/GS__0046.JPG"/>
 
-            <img id="ConstructionDepartment-blockRoom1" src="img/Construction-Department/"/>
-            <img id="ConstructionDepartment-blockRoom2" src="img/Construction-Department/"/>
-            <img id="ConstructionDepartment-blockRoom3" src="img/Construction-Department/"/>
-            <img id="ConstructionDepartment-blockRoom4" src="img/Construction-Department/"/>
-            <img id="ConstructionDepartment-blockRoom5" src="img/Construction-Department/"/>
+			<!-- ASSESTS END-->
 
-            <!-- ASSESTS END-->
+			<!-- A-SKY START-->
+			<a-sky id="img-360" src=""></a-sky>
+			<!-- A-SKY END-->
 
+			<!-- CAMERA START-->
+			<a-camera id="camera" position="0 1.6 0" look-controls camera>
+				<a-entity id="cursor" cursor="fuse: true; fuseTimeout: 500" position="0 0 -1" geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03" material="color: black; shader: flat">
+				</a-entity>
+			</a-camera>
+			<!-- CAMERA END-->
 
-            <!-- A-SKY START-->
-            <a-sky id="img-360" src="#Front-entranceRoom1"></a-sky>
-            <!-- A-SKY END-->
+			<!-- OCULUS TOUCH-CONTROLS START -->
+			<a-entity laser-controls="hand: right"></a-entity>
+			<!-- OCULUS TOUCH-CONTROLS END -->
 
-            <!-- CAMERA START-->
-            <a-camera id="camera" position="0 1.6 0" look-controls camera>
-                <a-entity id="cursor" cursor="fuse: true; fuseTimeout: 500" position="0 0 -1" geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03" material="color: black; shader: flat">
-                </a-entity>
-              </a-camera>
-            <!-- CAMERA END-->
+			<!-- HOTPOINT NAVIGATION START-->
+			<a-entity id="blocks" hotpoints></a-entity>
+			<!-- HOTPOINT NAVIGATION END-->
 
-            <!-- OCULUS TOUCH-CONTROLS START -->
-            <a-entity laser-controls="hand: right"></a-entity>
-            <!-- OCULUS TOUCH-CONTROLS END -->
+		</a-scene>
 
-            <!-- HOTPOINT NAVIGATION START-->
-            <a-entity id="blocks" hotpoints>
+	</div>
+	
+	<script>
+		function getData(location) {
+			$.ajax({
+				url: "/requestdata",
+				type: "get",
+				data: {loc: location},
+			})
+			.done(function(json) {
+				const root = document.getElementById("blocks");
+				root.innerHTML = "";
 
-                <!-- Front-entrance START-->
-                <a-entity id="Front-entrance">
-                    
-                    <a-entity id="Entrance-blockPoint1">
-                        <a-image src="#hotpoint" position="12 0 -10" material="shader: flat;" hotpoint="room:#Front-entranceRoom2;points:Entrance-blockPoint2;" look-at="#camera"></a-image>
-                        <a-image menu id="info1" src="img/Points/info-blue2.png" position="15 0 -10" material="shader: flat;" look-at="#camera"></a-image>
-                        <!--<a-image src="#informationpoint" position="7 0 -10" menu="title:Room1;description:This room is in use."></a-image>-->
-                    </a-entity>
+				const data = JSON.parse(json);
 
-                    <a-entity id="Entrance-blockPoint2" scale="0 0 0">
-                        <a-image src="#hotpoint" scale="5 5 5" position="40 -15 8" rotation="-90 0 250" hotpoint="room:#Front-entranceRoom3;points:Entrance-blockPoint3"></a-image>
-<!---                        <a-entity id="hotpoint" geometry="primitive: ring; radiusInner: 2.0; radiusOuter: 2.7" material="shader: flat;color:#c0c0c0;" position="50 -15 8" rotation="-90 100 70" look-at="#camera"> </a-entity>  -->   
-                        <a-image src="#hotpoint" position="-12 0 0" hotpoint="room:#Front-entranceRoom1;points:Entrance-blockPoint1;" look-at="#camera"></a-image>
-                        <a-image src="#hotpoint" position="12 0 -4" hotpoint="room:#Front-entranceRoom3;points:Entrance-blockPoint3" look-at="#camera"></a-image>
-                    </a-entity>
+				const sky = document.getElementById("img-360");
+				$(sky).attr("src", data.img);
 
-                    <a-entity id="Entrance-blockPoint3" scale="0 0 0">
-                        <a-image src="#hotpoint" position="12 0 -20" hotpoint="room:#Front-entranceRoom2;points:Entrance-blockPoint2;" look-at="#camera"></a-image>
-                        <a-image src="#hotpoint" position="12 0 -4" hotpoint="room:#Front-entranceRoom4;points:Entrance-blockPoint4;" look-at="#camera"></a-image>
-                    </a-entity>
+				for (var i = 0; i < data.hpImg.length; i++) {
+					const hotpoint = document.createElement("a-image");
+					$(hotpoint).attr("src", "#hotpoint");
+					$(hotpoint).attr("hotpoint", "room:" + data.hpImg[i]);
+					$(hotpoint).attr("position", data.hpPos[i]);
+					$(hotpoint).attr("rotation", data.hpRot[i]);
 
-                    <a-entity id="Entrance-blockPoint4" scale="0 0 0">
-                        <a-image src="#hotpoint" position="12 0 -20" hotpoint="room:#Front-entranceRoom3;points:Entrance-blockPoint3;" look-at="#camera"></a-image>
-                        <a-image src="#hotpoint" position="12 0 -4" hotpoint="room:#Front-entranceRoom5;points:Entrance-blockPoint5;" look-at="#camera"></a-image>
-                    </a-entity>
+					root.appendChild(hotpoint);
+				}
+			});
+		}
 
-                    <a-entity id="Entrance-blockPoint5" scale="0 0 0">
-                        <a-image src="#hotpoint" position="12 0 -20" hotpoint="room:#Front-entranceRoom4;points:Entrance-blockPoint4;"></a-image>
-                    </a-entity>
-    
-                </a-entity>
-                <!-- Front-entrance END-->
-
-                <!-- A-BLOCK START -->
-                <a-entity id="A-block">
-                    
-                    <a-entity id="A-blockPoint1" visible="false">
-                        <a-image src="#hotpoint" position="12 0 -10" material="shader: flat;" hotpoint="room:#A-blockRoom2;points:A-blockPoint2;" look-at="#camera"></a-image>
-                        <!--<a-image src="#informationpoint" position="7 0 -10" menu="title:Room1;description:This room is in use."></a-image>-->
-                    </a-entity>
-
-                    <a-entity id="A-blockPoint2" visible="false">
-                        <a-image src="#hotpoint" position="" hotpoint="room:#A-blockRoom1;points:A-blockPoint1;"></a-image>
-                        <a-image src="#hotpoint" position="" hotpoint="room:#A-blockRoom3;points:A-blockPoint3;"></a-image>
-                    </a-entity>
-
-                    <a-entity id="A-blockPoint3" visible="false">
-                        <a-image src="#hotpoint" position="" hotpoint="room:#A-blockRoom2;points:A-blockPoint2;"></a-image>
-                        <a-image src="#hotpoint" position="" hotpoint="room:#A-blockRoom4;points:A-blockPoint4;"></a-image>
-                    </a-entity>
-
-                    <a-entity id="A-blockPoint4" visible="false">
-                        <a-image src="#hotpoint" position="" hotpoint="room:#A-blockRoom3;points:A-blockPoint3;"></a-image>
-                        <a-image src="#hotpoint" position="" hotpoint="room:#A-blockRoom5;points:A-blockPoint5;"></a-image>
-                    </a-entity>
-
-                    <a-entity id="A-blockPoint5" visible="false">
-                        <a-image src="#hotpoint" position="" hotpoint="room:#A-blockRoom4;points:A-blockPoint4;"></a-image>
-                    </a-entity>
-    
-                </a-entity>
-                <!-- A-BLOCK END -->
-
-                <!-- B-BLOCK START -->
-                <a-entity id="B-block">
-                    
-                    <a-entity id="A-blockPoint1" visible="false">
-                        <a-image src="#hotpoint" position="" hotpoint="room:#B-blockRoom2;points:B-blockPoint2;"></a-image>
-                        <a-image src="#informationpoint" position="" menu="title:Room1;description:This room is in use."></a-image>
-                    </a-entity>
-
-                    <a-entity id="A-blockPoint2" visible="false">
-                        <a-image src="#hotpoint" position="" hotpoint="room:#B-blockRoom1;points:B-blockPoint1;"></a-image>
-                        <a-image src="#hotpoint" position="" hotpoint="room:#B-blockRoom3;points:B-blockPoint3;"></a-image>
-                    </a-entity>
-
-                    <a-entity id="A-blockPoint3" visible="false">
-                        <a-image src="#hotpoint" position="" hotpoint="room:#B-blockRoom2;points:B-blockPoint2;"></a-image>
-                        <a-image src="#hotpoint" position="" hotpoint="room:#B-blockRoom4;points:B-blockPoint4;"></a-image>
-                    </a-entity>
-
-                    <a-entity id="A-blockPoint4" visible="false">
-                        <a-image src="#hotpoint" position="" hotpoint="room:#B-blockRoom3;points:B-blockPoint3;"></a-image>
-                        <a-image src="#hotpoint" position="" hotpoint="room:#B-blockRoom5;points:B-blockPoint5;"></a-image>
-                    </a-entity>
-
-                    <a-entity id="A-blockPoint5" visible="false">
-                        <a-image src="#hotpoint" position="" hotpoint="room:#B-blockRoom4;points:B-blockPoint4;"></a-image>
-                    </a-entity>
-
-                </a-entity>
-                <!-- B-BLOCK END -->
-
-            </a-entity>
-            <!-- HOTPOINT NAVIGATION END-->
-
-        </a-scene>
-
-    </div>
+		getData("img/Front-Entrance/GS__0107.JPG");
+	</script>
 
   </body>
 </html>
