@@ -8,13 +8,11 @@
 AFRAME.registerComponent('hotpoint', {
 	schema: {
 		room:{type:"string",default:""},
-		points: {type:"string", default:""},
 	},
 
 	init: function() {
 
 		var newSky = this.data.room;
-		var newPoints = this.data.points;
 
 		this.setSky = function() {
 			var sky = document.querySelector('#img-360');

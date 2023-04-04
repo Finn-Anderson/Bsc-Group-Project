@@ -13,8 +13,11 @@ app.get("/", function(request, response) { //root dir
 app.get("/requestdata", function(request, response) {
 	var obj = new Object();
 	obj.img = request.query.loc;
+	obj.hpImg = [];
+	obj.hpPos = [];
+	obj.hpRot = [];
 
-	if (request.query.loc == "img/Front-Entrance/GS__0107.JPG") {
+	/*if (request.query.loc == "img/Front-Entrance/GS__0107.JPG") {
 		obj.hpImg = ["img/Front-Entrance/GS__0106.JPG"];
 		obj.hpPos = ["12 0 -10"];
 		obj.hpRot = ["0 -45 0"];
@@ -26,11 +29,34 @@ app.get("/requestdata", function(request, response) {
 		obj.hpImg = ["img/Front-Entrance/GS__0106.JPG"];
 		obj.hpPos = ["-15 0 2"];
 		obj.hpRot = ["0 90 0"];
-	}
+	}*/
 
-	var json = JSON.stringify(obj);
+	var mysql = require('mysql');
 
-	response.send(json);
+	var con = mysql.createConnection({
+		host: "comp-server.uhi.ac.uk",
+		user: "SH20002219",
+		password: "20002219",
+		database: "SH20002219"
+	});
+
+	con.connect(function(error) {
+		if (error) throw error;
+
+		var select = "SELECT * FROM hotpoints WHERE photo = ?";
+		con.query(select, [request.query.loc], function(error, result) {
+			if (error) throw error;
+			for (var i = 0; i < result.length; i++) {
+				obj.hpImg.push(result[i].destination);
+				obj.hpPos.push(result[i].position);
+				obj.hpRot.push(result[i].rotation);
+			}
+
+			var json = JSON.stringify(obj);
+
+			response.send(json);
+		})
+	});
 })
 
 app.listen(port, host);
