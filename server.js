@@ -17,20 +17,6 @@ app.get("/requestdata", function(request, response) {
 	obj.hpPos = [];
 	obj.hpRot = [];
 
-	/*if (request.query.loc == "img/Front-Entrance/GS__0107.JPG") {
-		obj.hpImg = ["img/Front-Entrance/GS__0106.JPG"];
-		obj.hpPos = ["12 0 -10"];
-		obj.hpRot = ["0 -45 0"];
-	} else if (request.query.loc == "img/Front-Entrance/GS__0106.JPG") {
-		obj.hpImg = ["img/Front-Entrance/GS__0107.JPG", "img/Front-Entrance/GS__0105.JPG"];
-		obj.hpPos = ["-12 0 0", "15 0 3"];
-		obj.hpRot = ["0 90 0", "0 -90 0"];
-	} else {
-		obj.hpImg = ["img/Front-Entrance/GS__0106.JPG"];
-		obj.hpPos = ["-15 0 2"];
-		obj.hpRot = ["0 90 0"];
-	}*/
-
 	var mysql = require('mysql');
 
 	var con = mysql.createConnection({
