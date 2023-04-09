@@ -29,13 +29,28 @@ app.get("/requestdata", function(request, response) {
 	con.connect(function(error) {
 		if (error) throw error;
 
-		var select = "SELECT * FROM hotpoints WHERE photo = ?";
-		con.query(select, [request.query.loc], function(error, result) {
+		var hotpointSelect = "SELECT * FROM hotpoints WHERE photo = ?";
+		con.query(hotpointSelect, [request.query.loc], function(error, result) {
 			if (error) throw error;
 			for (var i = 0; i < result.length; i++) {
 				obj.hpImg.push(result[i].destination);
 				obj.hpPos.push(result[i].position);
 				obj.hpRot.push(result[i].rotation);
+			}
+
+			var json = JSON.stringify(obj);
+
+			response.send(json);
+		})
+
+		var infoSelect = "SELECT * FROM infopoints WHERE photo = ?";
+		con.query(infoSelect, [request.query.loc], function(error, result) {
+			if (error) throw error;
+			for (var i = 0; i < result.length; i++) {
+				obj.infoTitle.push(result[i].title);
+				obj.infoDesc.push(result[i].description);
+				obj.infoPos.push(result[i].position);
+				obj.infoRot.push(result[i].rotation);
 			}
 
 			var json = JSON.stringify(obj);

@@ -1,0 +1,8 @@
+{
+	"hotpoints": [
+		{"photo": "img/Front-Entrance/GS__0107.JPG", "destination": "img/Front-Entrance/GS__0106.JPG", "position": "12 0 -10", "rotation": "0 -45 0"},
+		{"photo": "img/Front-Entrance/GS__0106.JPG", "destination": "img/Front-Entrance/GS__0107.JPG", "position": "-12 0 0", "rotation": "0 90 0"},
+		{"photo": "img/Front-Entrance/GS__0106.JPG", "destination": "img/Front-Entrance/GS__0105.JPG", "position": "15 0 3", "rotation": "0 -90 0"},
+		{"photo": "img/Front-Entrance/GS__0105.JPG", "destination": "img/Front-Entrance/GS__0106.JPG", "position": "-15 0 2", "rotation": "0 90 0"}
+	]
+}
