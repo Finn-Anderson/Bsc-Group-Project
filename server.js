@@ -12,10 +12,17 @@ app.get("/", function(request, response) { //root dir
 
 app.get("/requestdata", function(request, response) {
 	var obj = new Object();
+
 	obj.img = request.query.loc;
+
 	obj.hpImg = [];
 	obj.hpPos = [];
 	obj.hpRot = [];
+
+	obj.infoTitle = [];
+	obj.infoDesc = [];
+	obj.infoPos = [];
+	obj.infoRot = [];
 
 	var mysql = require('mysql');
 
@@ -38,9 +45,7 @@ app.get("/requestdata", function(request, response) {
 				obj.hpRot.push(result[i].rotation);
 			}
 
-			var json = JSON.stringify(obj);
-
-			response.send(json);
+			send();
 		})
 
 		var infoSelect = "SELECT * FROM infopoints WHERE photo = ?";
@@ -53,10 +58,18 @@ app.get("/requestdata", function(request, response) {
 				obj.infoRot.push(result[i].rotation);
 			}
 
-			var json = JSON.stringify(obj);
-
-			response.send(json);
+			send();
 		})
+
+		var count = 0;
+		function send() {
+			count += 1;
+			if (count > 1) {
+				var json = JSON.stringify(obj);
+
+				response.send(json);
+			}
+		}
 	});
 })
 

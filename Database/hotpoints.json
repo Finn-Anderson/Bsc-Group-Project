@@ -1,8 +1,223 @@
 {
 	"hotpoints": [
-		{"photo": "img/Front-Entrance/GS__0107.JPG", "destination": "img/Front-Entrance/GS__0106.JPG", "position": "12 0 -10", "rotation": "0 -45 0"},
-		{"photo": "img/Front-Entrance/GS__0106.JPG", "destination": "img/Front-Entrance/GS__0107.JPG", "position": "-12 0 0", "rotation": "0 90 0"},
-		{"photo": "img/Front-Entrance/GS__0106.JPG", "destination": "img/Front-Entrance/GS__0105.JPG", "position": "15 0 3", "rotation": "0 -90 0"},
-		{"photo": "img/Front-Entrance/GS__0105.JPG", "destination": "img/Front-Entrance/GS__0106.JPG", "position": "-15 0 2", "rotation": "0 90 0"}
+		{"photo": "img/Front-Entrance/GS__0107.JPG", "destination": "img/Front-Entrance/GS__0106.JPG", "position": "15 -20 -10", "rotation": "-90 0 -40"},
+
+		{"photo": "img/Front-Entrance/GS__0106.JPG", "destination": "img/Front-Entrance/GS__0107.JPG", "position": "-12 -30 0", "rotation": "-90 0 -40"},
+		{"photo": "img/Front-Entrance/GS__0106.JPG", "destination": "img/Front-Entrance/GS__0105.JPG", "position": "40 -15 8", "rotation": "-90 0 250"},
+
+		{"photo": "img/Front-Entrance/GS__0105.JPG", "destination": "img/Front-Entrance/GS__0106.JPG", "position": "-40 -15 10", "rotation": "-90 0 -50"},
+		{"photo": "img/Front-Entrance/GS__0105.JPG", "destination": "img/Front-Entrance/GS__0103.JPG", "position": "40 -15 -10", "rotation": "-90 0 -50"},
+
+		{"photo": "img/Front-Entrance/GS__0103.JPG", "destination": "img/Front-Entrance/GS__0105.JPG", "position": "-30 -15 -5", "rotation": "-90 0 -50"},
+		{"photo": "img/Front-Entrance/GS__0103.JPG", "destination": "img/Front-Entrance/GS__0102.JPG", "position": "0 -15 -50", "rotation": "-90 0 -50"},
+
+		{"photo": "img/Front-Entrance/GS__0102.JPG", "destination": "img/Front-Entrance/GS__0103.JPG", "position": "-35 -21 -35", "rotation": "-90 0 -40"},
+		{"photo": "img/Front-Entrance/GS__0102.JPG", "destination": "img/Front-Entrance/GS__0101.JPG", "position": "30 -12 -25", "rotation": "-90 0 -50"},
+
+		{"photo": "img/Front-Entrance/GS__0101.JPG", "destination": "img/Front-Entrance/GS__0102.JPG", "position": "-40 -15 10", "rotation": "-90 0 -40"},
+		{"photo": "img/Front-Entrance/GS__0101.JPG", "destination": "img/Cafeteria/GS__0100.JPG", "position": "20 -15 40", "rotation": "-90 0 -50"},
+
+
+
+		{"photo": "img/Cafeteria/GS__0100.JPG", "destination": "img/Front-Entrance/GS__0101.JPG", "position": "-35 -15 -2", "rotation": "-90 0 -40"},
+		{"photo": "img/Cafeteria/GS__0100.JPG", "destination": "img/Cafeteria/GS__0098.JPG", "position": "30 -21 36", "rotation": "-90 0 -40"},
+
+		{"photo": "img/Cafeteria/GS__0098.JPG", "destination": "img/Cafeteria/GS__0100.JPG", "position": "-30 -15 -2", "rotation": "-90 0 -40"},
+		{"photo": "img/Cafeteria/GS__0098.JPG", "destination": "img/AB-block-stairway/GS__0099.JPG", "position": "15 -20 -10", "rotation": "-90 0 -40"},
+		{"photo": "img/Cafeteria/GS__0098.JPG", "destination": "img/Cafeteria/GS__0097.JPG", "position": "35 -10 10", "rotation": "-90 0 -40"},
+
+		{"photo": "img/Cafeteria/GS__0097.JPG", "destination": "img/Cafeteria/GS__0098.JPG", "position": "-40 -15 -5", "rotation": "-90 0 -40"},
+		{"photo": "img/Cafeteria/GS__0097.JPG", "destination": "img/Cafeteria/GS__0096.JPG", "position": "50 -15 20", "rotation": "-90 0 -40"},
+
+		{"photo": "img/Cafeteria/GS__0096.JPG", "destination": "img/Cafeteria/GS__0097.JPG", "position": "-20 -15 -10", "rotation": "-90 0 -40"},
+		{"photo": "img/Cafeteria/GS__0096.JPG", "destination": "img/Cafeteria/GS__0095.JPG", "position": "45 -15 0", "rotation": "-90 0 -40"},
+
+		{"photo": "img/Cafeteria/GS__0095.JPG", "destination": "img/Cafeteria/GS__0096.JPG", "position": "-50 -15 0", "rotation": "-90 0 -40"},
+		{"photo": "img/Cafeteria/GS__0095.JPG", "destination": "img/Cafeteria/GS__0094.JPG", "position": "40 -15 -15", "rotation": "-90 0 -40"},
+
+		{"photo": "img/Cafeteria/GS__0094.JPG", "destination": "img/Cafeteria/GS__0095.JPG", "position": "-40 -15 2", "rotation": "-90 0 -40"},
+		{"photo": "img/Cafeteria/GS__0094.JPG", "destination": "img/B-Block-bottom/GS__0089.JPG", "position": "20 -20 10", "rotation": "-90 0 -40"},
+
+
+
+		{"photo": "img/B-Block-bottom/GS__0089.JPG", "destination": "img/Cafeteria/GS__0094.JPG", "position": "25 -25 1", "rotation": "-90 0 -40"},
+		{"photo": "img/B-Block-bottom/GS__0089.JPG", "destination": "img/B-Block-bottom/GS__0092.JPG", "position": "5 -25 -10", "rotation": "-90 0 -40"},
+		{"photo": "img/B-Block-bottom/GS__0089.JPG", "destination": "img/B-Block-bottom/GS__0090.JPG", "position": "-40 -15 -2", "rotation": "-90 0 -40"},
+
+		{"photo": "img/B-Block-bottom/GS__0090.JPG", "destination": "img/B-Block-bottom/GS__0089.JPG", "position": "40 -15 0", "rotation": "-90 0 -40"},
+		{"photo": "img/B-Block-bottom/GS__0090.JPG", "destination": "img/B-Block-stairway/GS__0088.JPG", "position": "-25 -25 -4", "rotation": "-90 0 -40"},
+		{"photo": "img/B-Block-bottom/GS__0090.JPG", "destination": "img/B-Block-bottom/GS__0091.JPG", "position": "-15 -25 5", "rotation": "-90 0 -40"},
+
+		{"photo": "img/B-Block-bottom/GS__0091.JPG", "destination": "img/B-Block-bottom/GS__0090.JPG", "position": "-20 -30 -20", "rotation": "-90 0 -40"},
+
+		{"photo": "img/B-Block-bottom/GS__0092.JPG", "destination": "img/B-Block-bottom/GS__0089.JPG", "position": "-15 -20 -20", "rotation": "-90 0 -40"},
+		{"photo": "img/B-Block-bottom/GS__0092.JPG", "destination": "img/B-Block-bottom/GS__0093.JPG", "position": "50 -20 -35", "rotation": "-90 0 -40"},
+
+		{"photo": "img/B-Block-bottom/GS__0093.JPG", "destination": "img/B-Block-bottom/GS__0092.JPG", "position": "-2 -20 60", "rotation": "-90 0 -40"},
+
+
+
+		{"photo": "img/AB-block-stairway/GS__0099.JPG", "destination": "img/Cafeteria/GS__0098.JPG", "position": "20 -20 -5", "rotation": "-90 0 40"},
+		{"photo": "img/AB-block-stairway/GS__0099.JPG", "destination": "img/AB-block-stairway/GS__0060.JPG", "position": "-15 -20 -5", "rotation": "-90 0 40"},
+
+		{"photo": "img/AB-block-stairway/GS__0060.JPG", "destination": "img/AB-block-stairway/GS__0099.JPG", "position": "-20 -30 5", "rotation": "-90 0 40"},
+		{"photo": "img/AB-block-stairway/GS__0060.JPG", "destination": "img/AB-block-stairway/GS__0061.JPG", "position": "20 -30 -20", "rotation": "-90 0 -40"},
+		{"photo": "img/AB-block-stairway/GS__0060.JPG", "destination": "img/Construction-Department/GS__0062.JPG", "position": "40 -30 -50", "rotation": "-90 0 -40"},
+
+		{"photo": "img/AB-block-stairway/GS__0061.JPG", "destination": "img/AB-block-stairway/GS__0060.JPG", "position": "-5 -30 10", "rotation": "-90 0 -40"},
+		{"photo": "img/AB-block-stairway/GS__0061.JPG", "destination": "img/AB-block-stairway/GS__0047.JPG", "position": "-5 -30 -10", "rotation": "-90 0 -40"},
+
+		{"photo": "img/AB-block-stairway/GS__0047.JPG", "destination": "img/AB-block-stairway/GS__0061.JPG", "position": "5 -15 -7", "rotation": "-90 0 -40"},
+		{"photo": "img/AB-block-stairway/GS__0047.JPG", "destination": "img/AB-block-stairway/GS__0048.JPG", "position": "30 -15 19", "rotation": "-90 0 -40"},
+		{"photo": "img/AB-block-stairway/GS__0047.JPG", "destination": "img/Computing-Department/GS__0044.JPG", "position": "-10 -15 -5", "rotation": "-90 0 -40"},
+
+		{"photo": "img/AB-block-stairway/GS__0048.JPG", "destination": "img/AB-block-stairway/GS__0047.JPG", "position": "-35 -15 -12", "rotation": "-90 0 -40"},
+		{"photo": "img/AB-block-stairway/GS__0048.JPG", "destination": "img/B-Block-top floor/GS__0049.JPG", "position": "20 -30 5", "rotation": "-90 0 -40"},
+
+
+
+		{"photo": "img/Construction-Department/GS__0062.JPG", "destination": "img/Construction-Department/GS__0063.JPG", "position": "40 -15 1", "rotation": "-90 0 -40"},
+		{"photo": "img/Construction-Department/GS__0062.JPG", "destination": "img/AB-block-stairway/GS__0060.JPG", "position": "-20 -30 -1", "rotation": "-90 0 -40"},
+
+		{"photo": "img/Construction-Department/GS__0063.JPG", "destination": "img/Construction-Department/GS__0066.JPG", "position": "20 -15 -5", "rotation": "-90 0 -40"},
+		{"photo": "img/Construction-Department/GS__0063.JPG", "destination": "img/Construction-Department/GS__0062.JPG", "position": "-35 -15 -5", "rotation": "-90 0 -40"},
+
+		{"photo": "img/Construction-Department/GS__0066.JPG", "destination": "img/Construction-Department/GS__0067.JPG", "position": "-25 -15 0", "rotation": "-90 0 -40"},
+		{"photo": "img/Construction-Department/GS__0066.JPG", "destination": "img/Construction-Department/GS__0063.JPG", "position": "8 -30 -13", "rotation": "-90 0 -40"},
+
+		{"photo": "img/Construction-Department/GS__0067.JPG", "destination": "img/Construction-Department/GS__0066.JPG", "position": "15 -15 25", "rotation": "-90 0 40"},
+		{"photo": "img/Construction-Department/GS__0067.JPG", "destination": "img/Construction-Department/GS__0064.JPG", "position": "-10 -15 -22", "rotation": "-90 0 40"},
+		{"photo": "img/Construction-Department/GS__0067.JPG", "destination": "img/Construction-Department/GS__0068.JPG", "position": "-30 -15 19", "rotation": "-90 0 40"},
+
+		{"photo": "img/Construction-Department/GS__0064.JPG", "destination": "img/Construction-Department/GS__0065.JPG", "position": "30 -15 3", "rotation": "-90 0 -40"},
+		{"photo": "img/Construction-Department/GS__0064.JPG", "destination": "img/Construction-Department/GS__0067.JPG", "position": "-30 -15 -3", "rotation": "-90 0 -40"},
+
+		{"photo": "img/Construction-Department/GS__0065.JPG", "destination": "img/Construction-Department/GS__0064.JPG", "position": "-30 -15 -3", "rotation": "-90 0 -40"},
+
+		{"photo": "img/Construction-Department/GS__0068.JPG", "destination": "img/Construction-Department/GS__0069.JPG", "position": "-40 -15 -15", "rotation": "-90 0 -40"},
+		{"photo": "img/Construction-Department/GS__0068.JPG", "destination": "img/Construction-Department/GS__0067.JPG", "position": "40 -15 15", "rotation": "-90 0 -40"},
+
+		{"photo": "img/Construction-Department/GS__0069.JPG", "destination": "img/Construction-Department/GS__0071.JPG", "position": "-5 -15 -40", "rotation": "-90 0 -40"},
+		{"photo": "img/Construction-Department/GS__0069.JPG", "destination": "img/Construction-Department/GS__0073.JPG", "position": "30 -15 -10", "rotation": "-90 0 -40"},
+		{"photo": "img/Construction-Department/GS__0069.JPG", "destination": "img/Construction-Department/GS__0068.JPG", "position": "10 -15 50", "rotation": "-90 0 -40"},
+
+		{"photo": "img/Construction-Department/GS__0071.JPG", "destination": "img/Construction-Department/GS__0072.JPG", "position": "-50 -15 5", "rotation": "-90 0 -40"},
+		{"photo": "img/Construction-Department/GS__0071.JPG", "destination": "img/Construction-Department/GS__0069.JPG", "position": "50 -15 -5", "rotation": "-90 0 -40"},
+
+		{"photo": "img/Construction-Department/GS__0073.JPG", "destination": "img/Construction-Department/GS__0069.JPG", "position": "30 -15 -5", "rotation": "-90 0 -40"},
+		{"photo": "img/Construction-Department/GS__0073.JPG", "destination": "img/Construction-Department/GS__0074.JPG", "position": "30 -15 -10", "rotation": "-90 0 -40"},
+		{"photo": "img/Construction-Department/GS__0073.JPG", "destination": "img/Construction-Department/GS__0075.JPG", "position": "30 -15 20", "rotation": "-90 0 -40"},
+		{"photo": "img/Construction-Department/GS__0073.JPG", "destination": "img/Construction-Department/GS__0077.JPG", "position": "10 -15 -30", "rotation": "-90 0 -40"},
+		{"photo": "img/Construction-Department/GS__0073.JPG", "destination": "img/Construction-Department/GS__0078.JPG", "position": "0 -15 30", "rotation": "-90 0 -40"},
+
+		{"photo": "img/Construction-Department/GS__0072.JPG", "destination": "img/Construction-Department/GS__0081.JPG", "position": "-50 -15 -5", "rotation": "-90 0 -40"},
+		{"photo": "img/Construction-Department/GS__0072.JPG", "destination": "img/Construction-Department/GS__0071.JPG", "position": "50 -15 -5", "rotation": "-90 0 -40"},
+
+		{"photo": "img/Construction-Department/GS__0081.JPG", "destination": "img/Construction-Department/GS__0082.JPG", "position": "-10 -15 -50", "rotation": "-90 0 -40"},
+		{"photo": "img/Construction-Department/GS__0081.JPG", "destination": "img/Construction-Department/GS__0072.JPG", "position": "10 -15 50", "rotation": "-90 0 -40"},
+		{"photo": "img/Construction-Department/GS__0081.JPG", "destination": "img/A-Block-stairway/GS__0083.JPG", "position": "20 -30 -5", "rotation": "-90 0 -40"},
+
+		{"photo": "img/Construction-Department/GS__0082.JPG", "destination": "img/Construction-Department/GS__0081.JPG", "position": "35 -15 -40", "rotation": "-90 0 -40"},
+
+		{"photo": "img/Construction-Department/GS__0074.JPG", "destination": "img/Construction-Department/GS__0073.JPG", "position": "-25 -15 -20", "rotation": "-90 0 -40"},
+
+		{"photo": "img/Construction-Department/GS__0075.JPG", "destination": "img/Construction-Department/GS__0073.JPG", "position": "-40 -15 0", "rotation": "-90 0 -40"},
+		{"photo": "img/Construction-Department/GS__0075.JPG", "destination": "img/Construction-Department/GS__0076.JPG", "position": "-15 -15 30", "rotation": "-90 0 -40"},
+
+		{"photo": "img/Construction-Department/GS__0076.JPG", "destination": "img/Construction-Department/GS__0073.JPG", "position": "-35 -15 -5", "rotation": "-90 0 -40"},
+		{"photo": "img/Construction-Department/GS__0076.JPG", "destination": "img/Construction-Department/GS__0075.JPG", "position": "5 -15 -30", "rotation": "-90 0 -40"},
+
+		{"photo": "img/Construction-Department/GS__0077.JPG", "destination": "img/Construction-Department/GS__0073.JPG", "position": "-5 -15 -40", "rotation": "-90 0 -40"},
+		{"photo": "img/Construction-Department/GS__0077.JPG", "destination": "img/Construction-Department/GS__0078.JPG", "position": "5 -15 40", "rotation": "-90 0 -40"},
+
+		{"photo": "img/Construction-Department/GS__0078.JPG", "destination": "img/Construction-Department/GS__0079.JPG", "position": "-25 -15 17", "rotation": "-90 0 -40"},
+		{"photo": "img/Construction-Department/GS__0078.JPG", "destination": "img/Construction-Department/GS__0077.JPG", "position": "-25 -15 -15", "rotation": "-90 0 -40"},
+
+		{"photo": "img/Construction-Department/GS__0079.JPG", "destination": "img/Construction-Department/GS__0078.JPG", "position": "-25 -15 -25", "rotation": "-90 0 -40"},
+
+
+
+		{"photo": "img/A-Block-stairway/GS__0083.JPG", "destination": "img/A-Block-stairway/GS__0084.JPG", "position": "15 -30 -5", "rotation": "-90 0 40"},
+		{"photo": "img/A-Block-stairway/GS__0083.JPG", "destination": "img/Construction-Department/GS__0081.JPG", "position": "-15 -30 15", "rotation": "-90 0 40"},
+
+
+		{"photo": "img/A-Block-stairway/GS__0084.JPG", "destination": "img/A-Block-stairway/GS__0038.JPG", "position": "-10 -30 10", "rotation": "-90 0 -40"},
+		{"photo": "img/A-Block-stairway/GS__0084.JPG", "destination": "img/A-Block-stairway/GS__0083.JPG", "position": "-10 -30 -10", "rotation": "-90 0 -40"},
+
+
+		{"photo": "img/A-Block-stairway/GS__0038.JPG", "destination": "img/Computing-Department/GS__0039.JPG", "position": "-20 -30 10", "rotation": "-90 0 -40"},
+		{"photo": "img/A-Block-stairway/GS__0038.JPG", "destination": "img/A-Block-stairway/GS__0084.JPG", "position": "5 -30 -15", "rotation": "-90 0 -40"},
+		{"photo": "img/A-Block-stairway/GS__0038.JPG", "destination": "img/Computing-Department/GS__0034.JPG", "position": "30 -30 -10", "rotation": "-90 0 -40"},
+
+
+
+		{"photo": "img/Computing-Department/GS__0044.JPG", "destination": "img/Computing-Department/GS__0043.JPG", "position": "-10 -15 3", "rotation": "-90 0 40"},
+		{"photo": "img/Computing-Department/GS__0044.JPG", "destination": "img/Computing-Department/GS__0045.JPG", "position": "-40 -15 3", "rotation": "-90 0 40"},
+		{"photo": "img/Computing-Department/GS__0044.JPG", "destination": "img/AB-block-stairway/GS__0047.JPG", "position": "20 -15 -2", "rotation": "-90 0 40"},
+
+		{"photo": "img/Computing-Department/GS__0043.JPG", "destination": "img/Computing-Department/GS__0044.JPG", "position": "-15 -15 20", "rotation": "-90 0 -40"},
+
+		{"photo": "img/Computing-Department/GS__0045.JPG", "destination": "img/Computing-Department/GS__0046.JPG", "position": "-40 -15 -3", "rotation": "-90 0 -40"},
+		{"photo": "img/Computing-Department/GS__0045.JPG", "destination": "img/Computing-Department/GS__0044.JPG", "position": "40 -15 4", "rotation": "-90 0 -40"},
+
+		{"photo": "img/Computing-Department/GS__0046.JPG", "destination": "img/Computing-Department/GS__0036.JPG", "position": "-20 -15 0", "rotation": "-90 0 -40"},
+		{"photo": "img/Computing-Department/GS__0046.JPG", "destination": "img/Computing-Department/GS__0045.JPG", "position": "50 -15 0", "rotation": "-90 0 -40"},
+
+		{"photo": "img/Computing-Department/GS__0036.JPG", "destination": "img/Computing-Department/GS__0037.JPG", "position": "40 -15 35", "rotation": "-90 0 -40"},
+		{"photo": "img/Computing-Department/GS__0036.JPG", "destination": "img/Computing-Department/GS__0046.JPG", "position": "-13 -15 -10", "rotation": "-90 0 -40"},
+		{"photo": "img/Computing-Department/GS__0036.JPG", "destination": "img/Computing-Department/GS__0030.JPG", "position": "17 -15 17", "rotation": "-90 0 -40"},
+
+		{"photo": "img/Computing-Department/GS__0037.JPG", "destination": "img/Computing-Department/GS__0034.JPG", "position": "-40 -15 0", "rotation": "-90 0 -40"},
+		{"photo": "img/Computing-Department/GS__0037.JPG", "destination": "img/Computing-Department/GS__0036.JPG", "position": "50 -15 -1", "rotation": "-90 0 -40"},
+
+		{"photo": "img/Computing-Department/GS__0034.JPG", "destination": "img/A-Block-stairway/GS__0038.JPG", "position": "20 -15 20", "rotation": "-90 0 -40"},
+		{"photo": "img/Computing-Department/GS__0034.JPG", "destination": "img/Computing-Department/GS__0037.JPG", "position": "-30 -15 -30", "rotation": "-90 0 -40"},
+
+		{"photo": "img/Computing-Department/GS__0039.JPG", "destination": "img/Computing-Department/GS__0040.JPG", "position": "13 -15 5", "rotation": "-90 0 -40"},
+		{"photo": "img/Computing-Department/GS__0039.JPG", "destination": "img/Computing-Department/GS__0041.JPG", "position": "30 -15 0", "rotation": "-90 0 -40"},
+		{"photo": "img/Computing-Department/GS__0039.JPG", "destination": "img/A-Block-stairway/GS__0038.JPG", "position": "-20 -15 1", "rotation": "-90 0 -40"},
+
+		{"photo": "img/Computing-Department/GS__0040.JPG", "destination": "img/Computing-Department/GS__0039.JPG", "position": "-10 -15 10", "rotation": "-90 0 -40"},
+
+		{"photo": "img/Computing-Department/GS__0041.JPG", "destination": "img/Computing-Department/GS__0039.JPG", "position": "-20 -15 10", "rotation": "-90 0 -40"},
+
+		{"photo": "img/Computing-Department/GS__0030.JPG", "destination": "img/Computing-Department/GS__0036.JPG", "position": "10 -15 30", "rotation": "-90 0 -40"},
+
+
+
+		{"photo": "img/B-Block-top floor/GS__0049.JPG", "destination": "img/AB-block-stairway/GS__0048.JPG", "position": "15 -15 -3", "rotation": "-90 0 40"},
+		{"photo": "img/B-Block-top floor/GS__0049.JPG", "destination": "img/B-Block-top floor/GS__0050.JPG", "position": "-40 -15 6", "rotation": "-90 0 40"},
+
+		{"photo": "img/B-Block-top floor/GS__0050.JPG", "destination": "img/B-Block-top floor/GS__0051.JPG", "position": "-40 -15 1", "rotation": "-90 0 40"},
+		{"photo": "img/B-Block-top floor/GS__0050.JPG", "destination": "img/B-Block-top floor/GS__0049.JPG", "position": "50 -15 -4", "rotation": "-90 0 40"},
+
+		{"photo": "img/B-Block-top floor/GS__0051.JPG", "destination": "img/B-Block-top floor/GS__0050.JPG", "position": "40 -15 10", "rotation": "-90 0 40"},
+		{"photo": "img/B-Block-top floor/GS__0051.JPG", "destination": "img/B-Block-top floor/GS__0059.JPG", "position": "-40 -30 -9", "rotation": "-90 0 40"},
+		{"photo": "img/B-Block-top floor/GS__0051.JPG", "destination": "img/B-Block-top floor/GS__0052.JPG", "position": "-10 -30 5", "rotation": "-90 0 40"},
+
+		{"photo": "img/B-Block-top floor/GS__0052.JPG", "destination": "img/B-Block-top floor/GS__0051.JPG", "position": "30 -15 -15", "rotation": "-90 0 40"},
+
+		{"photo": "img/B-Block-top floor/GS__0059.JPG", "destination": "img/B-Block-top floor/GS__0051.JPG", "position": "-20 -15 -1", "rotation": "-90 0 40"},
+		{"photo": "img/B-Block-top floor/GS__0059.JPG", "destination": "img/B-Block-top floor/GS__0058.JPG", "position": "40 -15 0", "rotation": "-90 0 40"},
+
+		{"photo": "img/B-Block-top floor/GS__0058.JPG", "destination": "img/B-Block-top floor/GS__0057.JPG", "position": "40 -15 -5", "rotation": "-90 0 40"},
+		{"photo": "img/B-Block-top floor/GS__0058.JPG", "destination": "img/B-Block-top floor/GS__0059.JPG", "position": "-40 -15 5", "rotation": "-90 0 40"},
+
+		{"photo": "img/B-Block-top floor/GS__0057.JPG", "destination": "img/B-Block-stairway/GS__0085.JPG", "position": "25 -15 1", "rotation": "-90 0 40"},
+		{"photo": "img/B-Block-top floor/GS__0057.JPG", "destination": "img/B-Block-top floor/GS__0058.JPG", "position": "-40 -15 -1", "rotation": "-90 0 40"},
+
+
+
+		{"photo": "img/B-Block-stairway/GS__0085.JPG", "destination": "img/B-Block-stairway/GS__0086.JPG", "position": "-10 -30 5", "rotation": "-90 0 40"},
+		{"photo": "img/B-Block-stairway/GS__0085.JPG", "destination": "img/B-Block-top floor/GS__0058.JPG", "position": "-7 -30 30", "rotation": "-90 0 40"},
+
+		{"photo": "img/B-Block-stairway/GS__0086.JPG", "destination": "img/B-Block-stairway/GS__0085.JPG", "position": "5 -30 -10", "rotation": "-90 0 -40"},
+		{"photo": "img/B-Block-stairway/GS__0086.JPG", "destination": "img/B-Block-stairway/GS__0087.JPG", "position": "30 -30 15", "rotation": "-90 0 -40"},
+
+		{"photo": "img/B-Block-stairway/GS__0087.JPG", "destination": "img/B-Block-stairway/GS__0086.JPG", "position": "-20 -30 0", "rotation": "-90 0 -40"},
+		{"photo": "img/B-Block-stairway/GS__0087.JPG", "destination": "img/B-Block-stairway/GS__0088.JPG", "position": "15 -30 0", "rotation": "-90 0 -40"},
+
+		{"photo": "img/B-Block-stairway/GS__0088.JPG", "destination": "img/B-Block-stairway/GS__0087.JPG", "position": "-20 -30 0", "rotation": "-90 0 -40"},
+		{"photo": "img/B-Block-stairway/GS__0088.JPG", "destination": "img/B-Block-bottom/GS__0090.JPG", "position": "20 -30 0", "rotation": "-90 0 -40"}
 	]
 }
