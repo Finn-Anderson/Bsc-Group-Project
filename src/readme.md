@@ -26,7 +26,7 @@ npm i http-server
 
 CDN minified version:
 ```
- <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+ <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
 ```
 
 A-frame CDN look-at-component:
