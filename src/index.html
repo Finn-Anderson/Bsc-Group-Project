@@ -21,6 +21,11 @@
     <script src="classes/menus.js"></script>
     <script src="classes/navigation.js"></script>
 
+    
+    <script>
+    
+    </script>
+
     <!-- EXTERNAL JAVASCRIPT END -->
 
     <!-- EXTERNAL CSS START -->
@@ -36,9 +41,9 @@
 
             <!-- ASSESTS START-->
 
-            <img id="hotpoint" src="img/Points/move_v2.png"/> <!-- 600x600 PIXELS-->
-            <img id="informationpoint" src="#"/> <!-- 600x600 PIXELS-->
-            <img id="texture" src="img/Points/move_03.png">
+            <img id="hotpoint" src="img/Points/move_v2.png"/>
+            <img id="informationpoint" src="img/Points/info-blue2.png"/>
+            <img id="informationpointBackground" src="img/Points/dec-box.png"/>
 
             <img id="Front-entranceRoom1" src="img/Front-Entrance/GS__0107.JPG">
             <img id="Front-entranceRoom2" src="img/Front-Entrance/GS__0106.JPG">
@@ -221,19 +226,10 @@
                 <a-entity id="Front-entrance">
                     
                     <a-entity id="Entrance-blockPoint1" scale="0 0 0">
-
-
-                        <a-image id="info1" src="img/Points/info-blue2.png" menu="title:Tormek Sharpening Stone;description:Used for sharpening hand tools – chisels, planes etc." position="15 0 -10" look-at="#camera">
-                            <a-text font="https://cdn.aframe.io/fonts/mozillavr.fnt" id="title" width="0.90" scale="0 0 0" height="0.60" baseline="top" position="-0.43 0.38 0.10" value="" wrap-count="25"></a-text>
-                            <a-text font="https://cdn.aframe.io/fonts/mozillavr.fnt" id="desc" width="0.80" scale="0 0 0" height="0.60" baseline="top" position="-0.43 0.25 0.10" value="" wrap-count="25"></a-text>
-                        </a-image>
-
-
                         <a-image class="clickable" src="#hotpoint" scale="5 5 5" position="15 -20 -10" rotation="-90 0 -40" hotpoint="room:#Front-entranceRoom2;points:Entrance-blockPoint2;"></a-image>
                     </a-entity>
 
-
-                    <a-entity id="Entrance-blockPoint2" scale="0 0 0">
+                    <a-entity id="Entrance-blockPoint2" scale="0 0 0">                        
                         <a-image class="clickable" src="#hotpoint" scale="5 5 5" position="-12 -30 0" rotation="-90 0 110" hotpoint="room:#Front-entranceRoom1;points:Entrance-blockPoint1;"></a-image>
                         <a-image class="clickable" src="#hotpoint" scale="5 5 5" position="40 -15 8" rotation="-90 0 250" hotpoint="room:#Front-entranceRoom3;points:Entrance-blockPoint3"></a-image>
                     </a-entity>
@@ -421,6 +417,12 @@
                         <a-image class="clickable" src="#hotpoint" scale="5 5 5" position="30 -15 20" rotation="-90 0 -100" hotpoint="room:#ConstructionDepartment-blockRoom15;points:ConstructionDepartment-blockPoint15;"></a-image> <!-- still need to expand-->
                         <a-image class="clickable" src="#hotpoint" scale="5 5 5" position="10 -15 -30" rotation="-90 0 -10" hotpoint="room:#ConstructionDepartment-blockRoom17;points:ConstructionDepartment-blockPoint17;"></a-image> <!-- still need to expand-->
                         <a-image class="clickable" src="#hotpoint" scale="5 5 5" position="0 -15 30" rotation="-90 0 -180" hotpoint="room:#ConstructionDepartment-blockRoom16;points:ConstructionDepartment-blockPoint16;"></a-image> <!-- still need to expand-->
+                    
+                        <a-image class="clickable" id="info9" src="#informationpoint" menu="title:Panel Dimension saw;description:Table saw used to rip, crosscut, trench rebate a range of materials. Sheet materials including plywood MDF and timber;" position="10 -2 -10" look-at="#camera">
+                            <a-text id="title" width="0.90" scale="0 0 0" height="0.60" baseline="top" position="-0.43 0.38 0.10" value="" wrap-count="25"></a-text>
+                            <a-text id="desc" width="0.80" scale="0 0 0" height="0.60" baseline="top" position="-0.43 0.25 0.10" value="" wrap-count="25"></a-text>
+                        </a-image>
+
                     </a-entity>
 
                     <a-entity id="ConstructionDepartment-blockPoint11" scale="0 0 0">
@@ -440,30 +442,80 @@
 
                     <a-entity id="ConstructionDepartment-blockPoint14" scale="0 0 0">
                         <a-image class="clickable" src="#hotpoint" scale="5 5 5" position="-25 -15 -20" rotation="-90 0 70" hotpoint="room:#ConstructionDepartment-blockRoom10;points:ConstructionDepartment-blockPoint10;"></a-image>
+                        
+                        <a-image class="clickable" id="info3" src="#informationpoint" menu="title:Four-sided planer;description:Used to dress timber and remove rough cut surfaces on all four sides.;" position="15 -2 10" look-at="#camera">
+                            <a-text id="title" width="0.90" scale="0 0 0" height="0.60" baseline="top" position="-0.43 0.38 0.10" value="" wrap-count="25"></a-text>
+                            <a-text id="desc" width="0.80" scale="0 0 0" height="0.60" baseline="top" position="-0.43 0.25 0.10" value="" wrap-count="25"></a-text>
+                        </a-image>
+
+                        <a-image class="clickable" id="info4" src="#informationpoint" menu="title:Table saw;description:Used to rip wood along the length of the grain;" position="-10 -2 10" look-at="#camera">
+                            <a-text id="title" width="0.90" scale="0 0 0" height="0.60" baseline="top" position="-0.43 0.38 0.10" value="" wrap-count="25"></a-text>
+                            <a-text id="desc" width="0.80" scale="0 0 0" height="0.60" baseline="top" position="-0.43 0.25 0.10" value="" wrap-count="25"></a-text>
+                        </a-image>
+                    
                     </a-entity>
                     
                     <a-entity id="ConstructionDepartment-blockPoint15" scale="0 0 0">
                         <a-image class="clickable" src="#hotpoint" scale="5 5 5" position="-40 -15 0" rotation="-90 0 100" hotpoint="room:#ConstructionDepartment-blockRoom10;points:ConstructionDepartment-blockPoint10;"></a-image>
                         <a-image class="clickable" src="#hotpoint" scale="5 5 5" position="-15 -15 30" rotation="-90 0 150" hotpoint="room:#ConstructionDepartment-blockRoom16;points:ConstructionDepartment-blockPoint16;"></a-image>
+                        
+                        <a-image class="clickable" id="info5" src="#informationpoint" menu="title:Wood Lathe;description:Wood turning, spindle work and bowls;" position="10 -2 -12" look-at="#camera">
+                            <a-text id="title" width="0.90" scale="0 0 0" height="0.60" baseline="top" position="-0.43 0.38 0.10" value="" wrap-count="25"></a-text>
+                            <a-text id="desc" width="0.80" scale="0 0 0" height="0.60" baseline="top" position="-0.43 0.25 0.10" value="" wrap-count="25"></a-text>
+                        </a-image>
+
+                        <a-image class="clickable" id="info7" src="#informationpoint" menu="title:Vertical Spindle Moulder;description:Versatile machine used to cut, mould and shape timber;" position="0 -2 -15" look-at="#camera">
+                            <a-text id="title" width="0.90" scale="0 0 0" height="0.60" baseline="top" position="-0.43 0.38 0.10" value="" wrap-count="25"></a-text>
+                            <a-text id="desc" width="0.80" scale="0 0 0" height="0.60" baseline="top" position="-0.43 0.25 0.10" value="" wrap-count="25"></a-text>
+                        </a-image>
+
+                        <a-image class="clickable" id="info8" src="#informationpoint" menu="title:Bobbin Sander;description:Used to sand down curved work. Particularly timbers with an internal curve;" position="3 -6 -10" look-at="#camera">
+                            <a-text id="title" width="0.90" scale="0 0 0" height="0.60" baseline="top" position="-0.43 0.38 0.10" value="" wrap-count="25"></a-text>
+                            <a-text id="desc" width="0.80" scale="0 0 0" height="0.60" baseline="top" position="-0.43 0.25 0.10" value="" wrap-count="25"></a-text>
+                        </a-image>
+
                     </a-entity>
                     
                     <a-entity id="ConstructionDepartment-blockPoint16" scale="0 0 0">
                         <a-image class="clickable" src="#hotpoint" scale="5 5 5" position="-35 -15 -5" rotation="-90 0 100" hotpoint="room:#ConstructionDepartment-blockRoom10;points:ConstructionDepartment-blockPoint10;"></a-image>
                         <a-image class="clickable" src="#hotpoint" scale="5 5 5" position="5 -15 -30" rotation="-90 0 10" hotpoint="room:#ConstructionDepartment-blockRoom15;points:ConstructionDepartment-blockPoint15;"></a-image>
+                        
+                        <a-image class="clickable" id="info6" src="#informationpoint" menu="title:Planer Thicknessor;description:Used to dress and size the timber to a desired thickness.;" position="-5 -2 -10" look-at="#camera">
+                            <a-text id="title" width="0.90" scale="0 0 0" height="0.60" baseline="top" position="-0.43 0.38 0.10" value="" wrap-count="25"></a-text>
+                            <a-text id="desc" width="0.80" scale="0 0 0" height="0.60" baseline="top" position="-0.43 0.25 0.10" value="" wrap-count="25"></a-text>
+                        </a-image>
+                    
                     </a-entity>
 
                     <a-entity id="ConstructionDepartment-blockPoint17" scale="0 0 0">
                         <a-image class="clickable" src="#hotpoint" scale="5 5 5" position="-5 -15 -40" rotation="-90 0 0" hotpoint="room:#ConstructionDepartment-blockRoom10;points:ConstructionDepartment-blockPoint10;"></a-image>
                         <a-image class="clickable" src="#hotpoint" scale="5 5 5" position="5 -15 40" rotation="-90 0 -150" hotpoint="room:#ConstructionDepartment-blockRoom18;points:ConstructionDepartment-blockPoint18;"></a-image>
+                    
+                        <a-image class="clickable" id="info11" src="#informationpoint" menu="title:Crosscut saw;description:Used to cut timber across the grain.;" position="10 -2 10" look-at="#camera">
+                            <a-text id="title" width="0.90" scale="0 0 0" height="0.60" baseline="top" position="-0.43 0.38 0.10" value="" wrap-count="25"></a-text>
+                            <a-text id="desc" width="0.80" scale="0 0 0" height="0.60" baseline="top" position="-0.43 0.25 0.10" value="" wrap-count="25"></a-text>
+                        </a-image>
+                    
                     </a-entity>
 
                     <a-entity id="ConstructionDepartment-blockPoint18" scale="0 0 0">
                         <a-image class="clickable" src="#hotpoint" scale="5 5 5" position="-25 -15 17" rotation="-90 0 140" hotpoint="room:#ConstructionDepartment-blockRoom19;points:ConstructionDepartment-blockPoint19;"></a-image>
                         <a-image class="clickable" src="#hotpoint" scale="5 5 5" position="-25 -15 -15" rotation="-90 0 70" hotpoint="room:#ConstructionDepartment-blockRoom17;points:ConstructionDepartment-blockPoint17;"></a-image>
+                    
+                        <a-image class="clickable" id="info10" src="#informationpoint" menu="title:Vertical Spindle Moulder;description:Versatile machine used to cut, mould and shape timber.;" position="10 -2 10" look-at="#camera">
+                            <a-text id="title" width="0.90" scale="0 0 0" height="0.60" baseline="top" position="-0.43 0.38 0.10" value="" wrap-count="25"></a-text>
+                            <a-text id="desc" width="0.80" scale="0 0 0" height="0.60" baseline="top" position="-0.43 0.25 0.10" value="" wrap-count="25"></a-text>
+                        </a-image>
+                    
                     </a-entity>
 
                     <a-entity id="ConstructionDepartment-blockPoint19" scale="0 0 0">
                         <a-image class="clickable" src="#hotpoint" scale="5 5 5" position="-25 -15 -25" rotation="-90 0 40" hotpoint="room:#ConstructionDepartment-blockRoom18;points:ConstructionDepartment-blockPoint18;"></a-image>
+                    
+                        <a-image class="clickable" id="info12" src="#informationpoint" menu="title:Band saw;description:Can be used to cut timber sheet materials etc. Can be used when doing curved cuts;" position="10 -2 -10" look-at="#camera">
+                            <a-text id="title" width="0.90" scale="0 0 0" height="0.60" baseline="top" position="-0.43 0.38 0.10" value="" wrap-count="25"></a-text>
+                            <a-text id="desc" width="0.80" scale="0 0 0" height="0.60" baseline="top" position="-0.43 0.25 0.10" value="" wrap-count="25"></a-text>
+                        </a-image>
                     </a-entity>
 
                 </a-entity>
