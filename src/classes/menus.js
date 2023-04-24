@@ -70,7 +70,6 @@ AFRAME.registerComponent('menu', {
                 setInformationIcon(element);
 
             } else {
-                var current_information_point = this.getAttribute("id");
                 setInformation(element);
             }
         }
