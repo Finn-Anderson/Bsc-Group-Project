@@ -12,16 +12,17 @@
     
     <!-- META TAGS START-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- META TAGS END-->
 
     <!-- EXTERNAL JAVASCRIPT START -->
     <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-dropdown-component@0.0.1/dist/aframe-dropdown.min.js"></script>
     <script src="classes/hotpoints.js"></script>
     <script src="classes/menus.js"></script>
     <script src="classes/navigation.js"></script>
-
-    
     <script>
     
     </script>
@@ -37,7 +38,7 @@
   <body>
     
     <div id="embeddedScene">
-        <a-scene embedded>
+        <a-scene>
 
             <!-- ASSESTS START-->
 
@@ -112,7 +113,6 @@
             <img id="ConstructionDepartment-blockRoom11" src="img/Construction-Department/GS__0072.JPG"/>
             <img id="ConstructionDepartment-blockRoom12" src="img/Construction-Department/GS__0081.JPG"/>
             <img id="ConstructionDepartment-blockRoom13" src="img/Construction-Department/GS__0082.JPG"/>
-
             <img id="ConstructionDepartment-blockRoom14" src="img/Construction-Department/GS__0074.JPG"/>
             <img id="ConstructionDepartment-blockRoom15" src="img/Construction-Department/GS__0075.JPG"/>
             <img id="ConstructionDepartment-blockRoom16" src="img/Construction-Department/GS__0076.JPG"/>
@@ -132,7 +132,7 @@
             <img id="search" src="img/Asset-Search/Search@3x.png">
 
             <!-- A-SKY START-->
-            <a-sky id="img-360" src="#ConstructionDepartment-blockRoom10"></a-sky>
+            <a-sky id="img-360" src="#Front-entranceRoom1"></a-sky>
             <!-- A-SKY END-->
 
             <!-- CAMERA START-->
@@ -150,7 +150,7 @@
 
             
             <!-- NAV CONTROLLER -->
-            <a-entity id="nav-container" position="0 1.6 -2" look-at="#camera" nav-controller>
+            <a-entity id="nav-container" position="0 1.6 -5" look-at="#camera" nav-controller>
                 <a-entity 
                     id="toggle" class="clickable" position="0 0 0"
                     geometry="primitive: circle; width: 0.4; height: 0.1; radius: 0.3"
@@ -225,7 +225,7 @@
                 <!-- Front-entrance START-->
                 <a-entity id="Front-entrance">
                     
-                    <a-entity id="Entrance-blockPoint1" scale="0 0 0">
+                    <a-entity id="Entrance-blockPoint1" scale="1 1 1">
                         <a-image class="clickable" src="#hotpoint" scale="5 5 5" position="15 -20 -10" rotation="-90 0 -40" hotpoint="room:#Front-entranceRoom2;points:Entrance-blockPoint2;"></a-image>
                     </a-entity>
 
@@ -307,7 +307,6 @@
                         <a-image class="clickable" src="#hotpoint" scale="5 5 5" position="40 -15 0" rotation="-90 0 -70" hotpoint="room:#B-blockBottomRoom1;points:B-blockPoint1;"></a-image>
                         <a-image class="clickable" src="#hotpoint" scale="5 5 5" position="-25 -25 -4" rotation="-90 0 100" hotpoint="room:#BBlockStairway-blockRoom4;points:BBlockStairway-blockPoint4;"></a-image>
                         <a-image class="clickable" src="#hotpoint" scale="5 5 5" position="-15 -25 5" rotation="-90 0 120" hotpoint="room:#B-blockBottomRoom3;points:B-blockPoint3;"></a-image>
-
                     </a-entity>
 
                     <a-entity id="B-blockPoint3" scale="0 0 0">
@@ -411,12 +410,12 @@
                         <a-image class="clickable" src="#hotpoint" scale="5 5 5" position="50 -15 -5" rotation="-90 0 -70" hotpoint="room:#ConstructionDepartment-blockRoom8;points:ConstructionDepartment-blockPoint8;"></a-image>
                     </a-entity>
 
-                    <a-entity id="ConstructionDepartment-blockPoint10" scale="1 1 1">
-                        <a-image class="clickable" src="#hotpoint" scale="5 5 5" position="-30 -15 -5" rotation="-90 0 90" hotpoint="room:#ConstructionDepartment-blockRoom8;points:ConstructionDepartment-blockPoint8;"></a-image> <!-- still need to expand-->
-                        <a-image class="clickable" src="#hotpoint" scale="5 5 5" position="30 -15 -10" rotation="-90 0 -40" hotpoint="room:#ConstructionDepartment-blockRoom14;points:ConstructionDepartment-blockPoint14;"></a-image> <!-- still need to expand-->
-                        <a-image class="clickable" src="#hotpoint" scale="5 5 5" position="30 -15 20" rotation="-90 0 -100" hotpoint="room:#ConstructionDepartment-blockRoom15;points:ConstructionDepartment-blockPoint15;"></a-image> <!-- still need to expand-->
-                        <a-image class="clickable" src="#hotpoint" scale="5 5 5" position="10 -15 -30" rotation="-90 0 -10" hotpoint="room:#ConstructionDepartment-blockRoom17;points:ConstructionDepartment-blockPoint17;"></a-image> <!-- still need to expand-->
-                        <a-image class="clickable" src="#hotpoint" scale="5 5 5" position="0 -15 30" rotation="-90 0 -180" hotpoint="room:#ConstructionDepartment-blockRoom16;points:ConstructionDepartment-blockPoint16;"></a-image> <!-- still need to expand-->
+                    <a-entity id="ConstructionDepartment-blockPoint10" scale="0 0 0">
+                        <a-image class="clickable" src="#hotpoint" scale="5 5 5" position="-30 -15 -5" rotation="-90 0 90" hotpoint="room:#ConstructionDepartment-blockRoom8;points:ConstructionDepartment-blockPoint8;"></a-image>
+                        <a-image class="clickable" src="#hotpoint" scale="5 5 5" position="30 -15 -10" rotation="-90 0 -40" hotpoint="room:#ConstructionDepartment-blockRoom14;points:ConstructionDepartment-blockPoint14;"></a-image>
+                        <a-image class="clickable" src="#hotpoint" scale="5 5 5" position="30 -15 20" rotation="-90 0 -100" hotpoint="room:#ConstructionDepartment-blockRoom15;points:ConstructionDepartment-blockPoint15;"></a-image>
+                        <a-image class="clickable" src="#hotpoint" scale="5 5 5" position="10 -15 -30" rotation="-90 0 -10" hotpoint="room:#ConstructionDepartment-blockRoom17;points:ConstructionDepartment-blockPoint17;"></a-image>
+                        <a-image class="clickable" src="#hotpoint" scale="5 5 5" position="0 -15 30" rotation="-90 0 -180" hotpoint="room:#ConstructionDepartment-blockRoom16;points:ConstructionDepartment-blockPoint16;"></a-image>
                     
                         <a-image class="clickable" id="info9" src="#informationpoint" menu="title:Panel Dimension saw;description:Table saw used to rip, crosscut, trench rebate a range of materials. Sheet materials including plywood MDF and timber;" position="10 -2 -10" look-at="#camera">
                             <a-text id="title" width="0.90" scale="0 0 0" height="0.60" baseline="top" position="-0.43 0.38 0.10" value="" wrap-count="25"></a-text>
