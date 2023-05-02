@@ -35,7 +35,7 @@
 		<a-scene embedded >
 
 			<!-- ASSESTS START-->
-			<img id="hotpoint" src="img/Points/move_03.png"/> <!-- 600x600 PIXELS-->
+			<img id="hotpoint" src="img/Points/move_v2.png"/> <!-- 600x600 PIXELS-->
 			<img id="informationpoint" src="#"/> <!-- 600x600 PIXELS-->
 			<!-- ASSESTS END-->
 
@@ -71,7 +71,6 @@
 			})
 			.done(function(json) {
 				const root = document.getElementById("blocks");
-				root.innerHTML = "";
 
 				const data = JSON.parse(json);
 

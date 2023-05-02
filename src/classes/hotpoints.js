@@ -17,6 +17,9 @@ AFRAME.registerComponent('hotpoint', {
 		this.setSky = function() {
 			var sky = document.querySelector('#img-360');
 			sky.setAttribute("src", newSky);
+				
+			const root = document.getElementById("blocks");
+			root.innerHTML = "";
 
 			getData(newSky);
 		}
