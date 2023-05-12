@@ -68,6 +68,8 @@ app.get("/requestdata", function(request, response) {
 				var json = JSON.stringify(obj);
 
 				response.send(json);
+
+				con.end();
 			}
 		}
 	});
