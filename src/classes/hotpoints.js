@@ -21,6 +21,9 @@ AFRAME.registerComponent('hotpoint', {
 			const root = document.getElementById("blocks");
 			root.innerHTML = "";
 
+			const loading = document.getElementById("loading");
+			loading.setAttribute("visible", true);
+
 			getData(newSky);
 		}
 

@@ -45,8 +45,8 @@
 
 			<!-- CAMERA START-->
 			<a-camera id="camera" position="0 1.6 0" look-controls camera>
-				<a-entity id="cursor" cursor="fuse: true; fuseTimeout: 500" position="0 0 -1" geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03" material="color: black; shader: flat">
-				</a-entity>
+				<a-entity id="cursor" cursor="fuse: true; fuseTimeout: 500" position="0 0 -1" geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03" material="color: black; shader: flat"></a-entity>
+				<a-entity id="loading" text="value: Loading...;" position="0.41 -0.08 -1" visible="false"></a-entity>
 			</a-camera>
 			<!-- CAMERA END-->
 
@@ -57,7 +57,6 @@
 			<!-- HOTPOINT NAVIGATION START-->
 			<a-entity id="blocks" hotpoints></a-entity>
 			<!-- HOTPOINT NAVIGATION END-->
-
 		</a-scene>
 
 	</div>
@@ -77,6 +76,9 @@
 				const sky = document.getElementById("img-360");
 				$(sky).attr("src", data.img);
 
+				const loading = document.getElementById("loading");
+				loading.setAttribute("visible", false);
+
 				for (var i = 0; i < data.hpImg.length; i++) {
 					const hotpoint = document.createElement("a-image");
 					$(hotpoint).attr("src", "#hotpoint");
@@ -88,9 +90,9 @@
 					root.appendChild(hotpoint);
 				}
 
-				/*for (var i = 0; i < data.infoTitle.length; i++) {
-					// Ask Paul how he plans to display each info point in VR.
-				}*/
+				for (var i = 0; i < data.infoTitle.length; i++) {
+					
+				}
 			});
 		}
 
