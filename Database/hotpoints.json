@@ -209,10 +209,10 @@
 
 
 		{"photo": "img/B-Block-stairway/GS__0085.JPG", "destination": "img/B-Block-stairway/GS__0086.JPG", "position": "-10 -30 5", "rotation": "-90 0 40"},
-		{"photo": "img/B-Block-stairway/GS__0085.JPG", "destination": "img/B-Block-top floor/GS__0058.JPG", "position": "-7 -30 30", "rotation": "-90 0 40"},
+		{"photo": "img/B-Block-stairway/GS__0085.JPG", "destination": "img/B-Block-top floor/GS__0057.JPG", "position": "-7 -30 30", "rotation": "-90 0 40"},
 
-		{"photo": "img/B-Block-stairway/GS__0086.JPG", "destination": "img/B-Block-stairway/GS__0085.JPG", "position": "5 -30 -10", "rotation": "-90 0 -40"},
-		{"photo": "img/B-Block-stairway/GS__0086.JPG", "destination": "img/B-Block-stairway/GS__0087.JPG", "position": "30 -30 15", "rotation": "-90 0 -40"},
+		{"photo": "img/B-Block-stairway/GS__0086.JPG", "destination": "img/B-Block-stairway/GS__0085.JPG", "position": "30 -30 15", "rotation": "-90 0 -40"},
+		{"photo": "img/B-Block-stairway/GS__0086.JPG", "destination": "img/B-Block-stairway/GS__0087.JPG", "position": "5 -30 -10", "rotation": "-90 0 -40"},
 
 		{"photo": "img/B-Block-stairway/GS__0087.JPG", "destination": "img/B-Block-stairway/GS__0086.JPG", "position": "-20 -30 0", "rotation": "-90 0 -40"},
 		{"photo": "img/B-Block-stairway/GS__0087.JPG", "destination": "img/B-Block-stairway/GS__0088.JPG", "position": "15 -30 0", "rotation": "-90 0 -40"},
