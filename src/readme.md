@@ -118,22 +118,3 @@ NPM install look-at-component:
 ```
 npm i aframe-look-at-component
 ```
-
-Edit index.html:
-```
-require('aframe-look-at-component');
-```
-
-### Certificate generation for localhost VR viewing
-
-```
-openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -sha256 -days 365
-```
-
-
-
-### Start HTTP-SERVER
-
-```
-http-server --ssl cert.pem
-```
