@@ -46,6 +46,10 @@
 			<!-- CAMERA START-->
 			<a-camera id="camera" position="0 1.6 0" look-controls camera>
 				<a-entity id="cursor" cursor="fuse: true; fuseTimeout: 500" position="0 0 -1" geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03" material="color: black; shader: flat"></a-entity>
+				<a-entity position="-0.85 0.725 -1">
+					<a-image src="img/Points/location-pin.png" scale="0.06 0.06 0.06" position="-0.54 0 0"></a-image>
+					<a-entity id="location" text="value: Front-Entrance"></a-entity>
+				</a-entity>
 				<a-entity id="loading" text="value: Loading...;" position="0.41 -0.08 -1" visible="false"></a-entity>
 			</a-camera>
 			<!-- CAMERA END-->

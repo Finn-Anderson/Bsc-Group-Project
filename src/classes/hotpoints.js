@@ -24,6 +24,11 @@ AFRAME.registerComponent('hotpoint', {
 			const loading = document.getElementById("loading");
 			loading.setAttribute("visible", true);
 
+			var pathList = newSky.split("/");
+			const location = document.getElementById("location");
+			location.setAttribute("text", "value: " + pathList[pathList.length - 2]);
+			console.log(pathList[pathList.length - 2]);
+
 			getData(newSky);
 		}
 
