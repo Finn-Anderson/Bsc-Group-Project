@@ -23,7 +23,7 @@ con.connect(function(error) {
 		console.log("Hotpoint table created!");
 	})
 
-	var infopoints = "CREATE TABLE IF NOT EXISTS infopoints (photo VARCHAR(255), title VARCHAR(25), description VARCHAR(255), position VARCHAR(15), rotation VARCHAR(15), FOREIGN KEY (photo) REFERENCES photographs (photo) ON DELETE CASCADE ON UPDATE CASCADE, PRIMARY KEY (photo, title))";
+	var infopoints = "CREATE TABLE IF NOT EXISTS infopoints (photo VARCHAR(255), title VARCHAR(25), description VARCHAR(255), position VARCHAR(15), FOREIGN KEY (photo) REFERENCES photographs (photo) ON DELETE CASCADE ON UPDATE CASCADE, PRIMARY KEY (photo, title))";
 	con.query(infopoints, function(error, result) {
 		if (error) throw error;
 		console.log("Info table created!");

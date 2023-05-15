@@ -21,7 +21,7 @@ con.connect(function(error) {
 	let data = JSON.parse(fs.readFileSync('./info.json'));
 
 	for (var i = 0; i < data.info.length; i++) {
-		var insert = "INSERT INTO infopoints (photo, title, description, position, rotation) VALUES ('" + data.info[i].photo + "', '" + data.info[i].title + "', '" + data.info[i].description + "', '" + data.info[i].position + "', '" + data.info[i].rotation + "')";
+		var insert = "INSERT INTO infopoints (photo, title, description, position) VALUES ('" + data.info[i].photo + "', '" + data.info[i].title + "', '" + data.info[i].description + "', '" + data.info[i].position + "')";
 		con.query(insert, function(error, result) {
 			if (error) throw error;
 		})
