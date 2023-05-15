@@ -22,7 +22,6 @@ app.get("/requestdata", function(request, response) {
 	obj.infoTitle = [];
 	obj.infoDesc = [];
 	obj.infoPos = [];
-	obj.infoRot = [];
 
 	var mysql = require('mysql');
 
@@ -55,7 +54,6 @@ app.get("/requestdata", function(request, response) {
 				obj.infoTitle.push(result[i].title);
 				obj.infoDesc.push(result[i].description);
 				obj.infoPos.push(result[i].position);
-				obj.infoRot.push(result[i].rotation);
 			}
 
 			send();
