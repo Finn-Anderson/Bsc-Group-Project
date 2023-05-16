@@ -27,7 +27,6 @@ AFRAME.registerComponent('hotpoint', {
 			var pathList = newSky.split("/");
 			const location = document.getElementById("location");
 			location.setAttribute("text", "value: " + pathList[pathList.length - 2]);
-			console.log(pathList[pathList.length - 2]);
 
 			getData(newSky);
 		}

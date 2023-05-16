@@ -37,7 +37,8 @@
 			<!-- ASSESTS START-->
 			<img id="hotpoint" src="img/Points/move_v2.png"/>
             <img id="informationpoint" src="img/Points/info-blue2.png"/>
-            <img id="informationpointBackground" src="img/Points/dec-box.png"/>
+            <img id="informationpointBackground" src="img/Points/desc-box.png"/>
+            <img id="informationpointClose" src="img/Points/desc-close.png"/>
 			<!-- ASSESTS END-->
 
 			<!-- A-SKY START-->
@@ -96,7 +97,51 @@
 				}
 
 				for (var i = 0; i < data.infoTitle.length; i++) {
-					
+					const wrapper = document.createElement("a-entity");
+					root.appendChild(wrapper);
+
+					const infopoint = document.createElement("a-image");
+					infopoint.setAttribute("src", "#informationpoint");
+					infopoint.setAttribute("position", data.infoPos[i]);
+					infopoint.setAttribute("look-at", "#camera");
+					infopoint.setAttribute("menu", "cmd:open");
+
+					wrapper.appendChild(infopoint);
+
+					const infodesc = document.createElement("a-image");
+					infodesc.setAttribute("src", "#informationpointBackground");
+					infodesc.setAttribute("position", data.infoPos[i]);
+					infodesc.setAttribute("scale", "0 0 0");
+					infodesc.setAttribute("look-at", "#camera");
+
+					wrapper.appendChild(infodesc);
+
+					for (var j = 0; j < 2; j++) {
+						const text = document.createElement("a-text");
+						text.setAttribute("width", "0.90");
+						text.setAttribute("height", "0.60");
+						text.setAttribute("scale", "1 1 1");
+						text.setAttribute("baseline", "top");
+						text.setAttribute("wrap-count", "25");
+
+						if (j == 0) {
+							text.setAttribute("position", "-0.43 0.38 0.10");
+							text.setAttribute("value", data.infoTitle[i]);
+						} else {
+							text.setAttribute("position", "-0.43 0.25 0.10");
+							text.setAttribute("value", data.infoDesc[i]);
+						}
+
+						infodesc.appendChild(text);
+					}
+
+					const closeBtn = document.createElement("a-image");
+					closeBtn.setAttribute("src", "#informationpointClose");
+					closeBtn.setAttribute("position", "0.43 0.43 0.01");
+					closeBtn.setAttribute("scale", "0.06 0.06 0.06");
+					closeBtn.setAttribute("menu", "cmd:close");
+
+					infodesc.appendChild(closeBtn);
 				}
 			});
 		}
