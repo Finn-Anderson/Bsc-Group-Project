@@ -1,6 +1,5 @@
 /*
-	Development build version: 0.1
-	Build date: 02/03/2023
+	Project: WebXR VR Tour
 	Author: Bsc Team Project Group 2023
 	Description: Hotpoint Navigation Components
 */
@@ -11,7 +10,6 @@ AFRAME.registerComponent('hotpoint', {
 	},
 
 	init: function() {
-
 		var newSky = this.data.room;
 
 		this.setSky = function() {
@@ -31,14 +29,8 @@ AFRAME.registerComponent('hotpoint', {
 			getData(newSky);
 		}
 
-		this.main = function() {
-			this.setSky;
-		}
-		// Clean up add signle addEventListener to main - 
 		this.el.addEventListener('click', this.setSky);
-
 	},
-	update: function() {},
 	remove: function() {
 		this.el.removeEventListener('click', this.setSky);
 	}

@@ -1,42 +1,39 @@
 /*
-	Development build version: 0.1
-	Build date: 02/03/2023
+	Project: WebXR VR Tour
 	Author: Bsc Team Project Group 2023
-	Description: Hotpoint Navigation Components
+	Description: Info point card display 
 */
 
-AFRAME.registerComponent('menu', {
+AFRAME.registerComponent('info', {
 	schema: {
 		cmd:{type:"string",default:""},
 	},
 
 	init: function() {
-
 		var command = this.data.cmd;
 
-		function setInformation(hotpoint) {
+		function displayInfo(hotpoint) {
 			hotpoint.setAttribute("scale", "10 10 10");
 
 			hotpoint.previousElementSibling.setAttribute("visible", "false");
 		}
 
-		function setInformationIcon(hotpoint) {
+		function hideInfo(hotpoint) {
 			hotpoint.setAttribute("scale", "0 0 0");
 
 			hotpoint.previousElementSibling.setAttribute("visible", "true");
 		}
 
-		this.setMenu = function() {
+		this.setInfo = function() {
 			if (command == "close") {
-				setInformationIcon(this.parentElement);
+				hideInfo(this.parentElement);
 			} else if (command == "open") {
-				setInformation(this.nextElementSibling);
+				displayInfo(this.nextElementSibling);
 			}
 		}
-		this.el.addEventListener('click', this.setMenu);
+		this.el.addEventListener('click', this.setInfo);
 	},
-	update: function() {},
 	remove: function() {
-		this.el.removeEventListener('click', this.setMenu);
+		this.el.removeEventListener('click', this.setInfo);
 	}
 })

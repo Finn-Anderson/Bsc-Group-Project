@@ -30,4 +30,6 @@ con.connect(function(error) {
 			console.log("All records inserted successfully");
 		}
 	}
+
+	con.end();
 });

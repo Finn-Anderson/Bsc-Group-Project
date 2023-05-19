@@ -1,153 +1,413 @@
-
 <!--
-	Development build version: 0.1
-	Build date: 02/03/2023
+	Project: WebXR VR Tour
 	Author: Bsc Team Project Group 2023
 -->
 
 <!DOCTYPE html>
 <html>
-  
-  <head>
-	
-	<!-- META TAGS START-->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<!-- META TAGS END-->
+	<head>
+		
+		<!-- META TAGS START-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- META TAGS END-->
 
-	<!-- EXTERNAL JAVASCRIPT START -->
-	<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-	<script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
-	<script src="classes/hotpoints.js"></script>
-	<script src="classes/menus.js"></script>
+		<!-- EXTERNAL JAVASCRIPT START -->
+		<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+		<script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
+		<script src="classes/hotpoints.js"></script>
+		<script src="classes/info.js"></script>
+		<script src="classes/navigation.js"></script>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-	<!-- EXTERNAL JAVASCRIPT END -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+		<!-- EXTERNAL JAVASCRIPT END -->
 
-	<!-- EXTERNAL CSS START -->
-	<link rel="stylesheet" href="css/style.css">
-	<!-- EXTERNAL CSS END -->
+		<!-- EXTERNAL CSS START -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<link rel="stylesheet" href="css/style.css">
+		<!-- EXTERNAL CSS END -->
 
-  </head>
+	</head>
 
-  <body>
-	
-	<div id="embeddedScene">
-		<a-scene embedded >
+	<body>
 
-			<!-- ASSESTS START-->
-			<img id="hotpoint" src="img/Points/move_v2.png"/>
-            <img id="informationpoint" src="img/Points/info-blue2.png"/>
-            <img id="informationpointBackground" src="img/Points/desc-box.png"/>
-            <img id="informationpointClose" src="img/Points/desc-close.png"/>
-			<!-- ASSESTS END-->
+		<!-- Header and Navbar -->
+		<header id="uhi_header">
+			<div id="header__toolbar">
+				<ul>
+					<li><a href="#">Current students</a></li>
+					<li><a href="#">Staff</a></li>
+					<li><a href="#">Alumni</a></li>
+					<li><a href="#">Translate <i class="fa-solid fa-caret-down fa-xl" style="color: #ffffff;"></i></a></li>
+				</ul>
+			</div>
+			<div id="uhi_navbar">
+				<img id="uhi_logo" src="img/uhi-logo.png" alt="uhi logo | banner">
 
-			<!-- A-SKY START-->
-			<a-sky id="img-360" src=""></a-sky>
-			<!-- A-SKY END-->
+				<ul>
+					<li><a href="#">Courses</a></li>
+					<li><a href="#">Study with us</a></li>
+					<li><a href="#">Campuses</a></li>
+					<li><a href="#">Research</a></li>
+					<li><a href="#">Businesses</a></li>
+					<li><i class="fa-solid fa-magnifying-glass fa-l" style="color: #ffffff;"></i></li>
+				</ul>
+			</div>
+		</header>
+		
+		<!-- VR MODEL -->
+		<div id="embeddedScene">
+			<a-scene embedded >
 
-			<!-- CAMERA START-->
-			<a-camera id="camera" position="0 1.6 0" look-controls camera>
-				<a-entity id="cursor" cursor="fuse: true; fuseTimeout: 500" position="0 0 -1" geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03" material="color: black; shader: flat"></a-entity>
-				<a-entity position="-0.85 0.725 -1">
-					<a-image src="img/Points/location-pin.png" scale="0.06 0.06 0.06" position="-0.54 0 0"></a-image>
-					<a-entity id="location" text="value: Front-Entrance"></a-entity>
+				<!-- ASSESTS START-->
+				<img id="hotpoint" src="img/Points/hotpoint.png"/>
+				<img id="informationpoint" src="img/Points/info.png"/>
+				<img id="informationpointBackground" src="img/Points/desc-box.png"/>
+				<img id="informationpointClose" src="img/Points/desc-close.png"/>
+				<img id="search" src="img/Points/search.png">
+				<!-- ASSESTS END-->
+
+				<!-- A-SKY START-->
+				<a-sky id="img-360" src=""></a-sky>
+				<!-- A-SKY END-->
+
+				<!-- CAMERA START-->
+				<a-camera id="camera" position="0 1.6 0" look-controls camera fov="90">
+					<a-entity id="cursor" cursor="fuse: true; fuseTimeout: 500" position="0 0 -1" geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03" material="color: black; shader: flat"></a-entity>
+					<a-entity position="-0.85 0.725 -1">
+						<a-image src="img/Points/location-pin.png" scale="0.06 0.06 0.06" position="-0.54 0 0"></a-image>
+						<a-entity id="location" text="value: Front-Entrance"></a-entity>
+					</a-entity>
+					<a-entity id="loading" text="value: Loading...;" position="0.41 -0.08 -1" visible="false"></a-entity>
+				</a-camera>
+				<!-- CAMERA END-->
+
+				<a-entity position="0 1.6 -5" look-at="#camera" nav-controller>
+					<a-image src="#search" width="0.6" height="0.6" position="0 0 0" nav></a-image>
+
+					<a-entity id="dropdown" class="nav-dropdown" position="0 -0.3 0" scale="0 0 0">
+						<!-- CORE - START -->
+						<a-entity 
+							position="-0.8 0.8 0" text="value: Front Entrance; align: center; width: 3"
+							geometry="primitive: plane; width: 1.2; height: 0.3"
+							material="color: #333; opacity: 0.4; transparent: true"
+							hotpoint="room:img/Front-Entrance/GS__0107.JPG" nav
+						></a-entity>
+
+						<a-entity 
+							position="0.8 0.8 0" text="value: Cafeteria; align: center; width: 3"
+							geometry="primitive: plane; width: 1.2; height: 0.3"
+							material="color: #333; opacity: 0.4; transparent: true"
+							hotpoint="room:img/Cafeteria/GS__0100.JPG" nav
+						></a-entity>
+						<!-- CORE - END -->
+
+						<!-- BLOCKS - START -->
+						<a-entity 
+							position="-0.8 -0.2 0" text="value: B Block Top; align: center; width: 3"
+							geometry="primitive: plane; width: 1.2; height: 0.3"
+							material="color: #333; opacity: 0.4; transparent: true"
+							hotpoint="room:img/B-Block-top floor/GS__0049.JPG" nav
+						></a-entity>
+
+						<a-entity 
+							position="-0.8 -0.6 0" text="value: B Block Bottom; align: center; width: 3"
+							geometry="primitive: plane; width: 1.2; height: 0.3"
+							material="color: #333; opacity: 0.4; transparent: true"
+							hotpoint="room:img/B-Block-bottom/GS__0089.JPG" nav
+						></a-entity>
+						<!-- BLOCKS - END -->
+
+						<!-- DEPT - START -->
+						<a-entity 
+							position="0.8 -0.2 0" text="value: Computing Dept; align: center; width: 3"
+							geometry="primitive: plane; width: 1.2; height: 0.3"
+							material="color: #333; opacity: 0.4; transparent: true"
+							hotpoint="room:img/Computing-Department/GS__0044.JPG" nav
+						></a-entity>
+						
+						<a-entity 
+							position="0.8 -0.6 0" text="value: Construction Dept; align: center; width: 3"
+							geometry="primitive: plane; width: 1.2; height: 0.3"
+							material="color: #333; opacity: 0.4; transparent: true"
+							hotpoint="room:img/Construction-Department/GS__0062.JPG" nav
+						></a-entity>
+						<!-- DEPT - END -->
+					</a-entity>
 				</a-entity>
-				<a-entity id="loading" text="value: Loading...;" position="0.41 -0.08 -1" visible="false"></a-entity>
-			</a-camera>
-			<!-- CAMERA END-->
 
-			<!-- OCULUS TOUCH-CONTROLS START -->
-			<a-entity laser-controls="hand: right"></a-entity>
-			<!-- OCULUS TOUCH-CONTROLS END -->
+				<!-- OCULUS TOUCH-CONTROLS START -->
+				<a-entity laser-controls="hand: right"></a-entity>
+				<!-- OCULUS TOUCH-CONTROLS END -->
 
-			<!-- HOTPOINT NAVIGATION START-->
-			<a-entity id="blocks" hotpoints></a-entity>
-			<!-- HOTPOINT NAVIGATION END-->
-		</a-scene>
+				<!-- HOTPOINT NAVIGATION START-->
+				<a-entity id="blocks" hotpoints></a-entity>
+				<!-- HOTPOINT NAVIGATION END-->
+			</a-scene>
 
-	</div>
-	
-	<script>
-		function getData(location) {
-			$.ajax({
-				url: "/requestdata",
-				type: "get",
-				data: {loc: location},
-			})
-			.done(function(json) {
-				const root = document.getElementById("blocks");
+		</div>
+		
+		<script>
+			function getData(location) {
+				$.ajax({
+					url: "/requestdata",
+					type: "get",
+					data: {loc: location},
+				})
+				.done(function(json) {
+					const root = document.getElementById("blocks");
 
-				const data = JSON.parse(json);
+					const data = JSON.parse(json);
 
-				const sky = document.getElementById("img-360");
-				$(sky).attr("src", data.img);
+					const sky = document.getElementById("img-360");
+					$(sky).attr("src", data.img);
 
-				const loading = document.getElementById("loading");
-				loading.setAttribute("visible", false);
+					const loading = document.getElementById("loading");
+					loading.setAttribute("visible", false);
 
-				for (var i = 0; i < data.hpImg.length; i++) {
-					const hotpoint = document.createElement("a-image");
-					$(hotpoint).attr("src", "#hotpoint");
-					$(hotpoint).attr("hotpoint", "room:" + data.hpImg[i]);
-					$(hotpoint).attr("position", data.hpPos[i]);
-					$(hotpoint).attr("rotation", data.hpRot[i]);
-					$(hotpoint).attr("scale", "5 5 5");
+					for (var i = 0; i < data.hpImg.length; i++) {
+						const hotpoint = document.createElement("a-image");
+						$(hotpoint).attr("src", "#hotpoint");
+						$(hotpoint).attr("hotpoint", "room:" + data.hpImg[i]);
+						$(hotpoint).attr("position", data.hpPos[i]);
+						$(hotpoint).attr("rotation", data.hpRot[i]);
+						$(hotpoint).attr("scale", "5 5 5");
 
-					root.appendChild(hotpoint);
-				}
-
-				for (var i = 0; i < data.infoTitle.length; i++) {
-					const wrapper = document.createElement("a-entity");
-					root.appendChild(wrapper);
-
-					const infopoint = document.createElement("a-image");
-					infopoint.setAttribute("src", "#informationpoint");
-					infopoint.setAttribute("position", data.infoPos[i]);
-					infopoint.setAttribute("look-at", "#camera");
-					infopoint.setAttribute("menu", "cmd:open");
-
-					wrapper.appendChild(infopoint);
-
-					const infodesc = document.createElement("a-image");
-					infodesc.setAttribute("src", "#informationpointBackground");
-					infodesc.setAttribute("position", data.infoPos[i]);
-					infodesc.setAttribute("scale", "0 0 0");
-					infodesc.setAttribute("look-at", "#camera");
-
-					wrapper.appendChild(infodesc);
-
-					for (var j = 0; j < 2; j++) {
-						const text = document.createElement("a-text");
-						text.setAttribute("width", "0.90");
-						text.setAttribute("height", "0.60");
-						text.setAttribute("scale", "1 1 1");
-						text.setAttribute("baseline", "top");
-						text.setAttribute("wrap-count", "25");
-
-						if (j == 0) {
-							text.setAttribute("position", "-0.43 0.38 0.10");
-							text.setAttribute("value", data.infoTitle[i]);
-						} else {
-							text.setAttribute("position", "-0.43 0.25 0.10");
-							text.setAttribute("value", data.infoDesc[i]);
-						}
-
-						infodesc.appendChild(text);
+						root.appendChild(hotpoint);
 					}
 
-					const closeBtn = document.createElement("a-image");
-					closeBtn.setAttribute("src", "#informationpointClose");
-					closeBtn.setAttribute("position", "0.43 0.43 0.01");
-					closeBtn.setAttribute("scale", "0.06 0.06 0.06");
-					closeBtn.setAttribute("menu", "cmd:close");
+					for (var i = 0; i < data.infoTitle.length; i++) {
+						const wrapper = document.createElement("a-entity");
+						root.appendChild(wrapper);
 
-					infodesc.appendChild(closeBtn);
-				}
+						const infopoint = document.createElement("a-image");
+						infopoint.setAttribute("src", "#informationpoint");
+						infopoint.setAttribute("position", data.infoPos[i]);
+						infopoint.setAttribute("look-at", "#camera");
+						infopoint.setAttribute("info", "cmd:open");
+
+						wrapper.appendChild(infopoint);
+
+						const infodesc = document.createElement("a-image");
+						infodesc.setAttribute("src", "#informationpointBackground");
+						infodesc.setAttribute("position", data.infoPos[i]);
+						infodesc.setAttribute("scale", "0 0 0");
+						infodesc.setAttribute("look-at", "#camera");
+
+						wrapper.appendChild(infodesc);
+
+						for (var j = 0; j < 2; j++) {
+							const text = document.createElement("a-text");
+							text.setAttribute("width", "0.90");
+							text.setAttribute("height", "0.60");
+							text.setAttribute("scale", "1 1 1");
+							text.setAttribute("baseline", "top");
+							text.setAttribute("wrap-count", "25");
+
+							if (j == 0) {
+								text.setAttribute("position", "-0.43 0.38 0.10");
+								text.setAttribute("value", data.infoTitle[i]);
+							} else {
+								text.setAttribute("position", "-0.43 0.20 0.10");
+								text.setAttribute("value", data.infoDesc[i]);
+							}
+
+							infodesc.appendChild(text);
+						}
+
+						const closeBtn = document.createElement("a-image");
+						closeBtn.setAttribute("src", "#informationpointClose");
+						closeBtn.setAttribute("position", "0.43 0.43 0.01");
+						closeBtn.setAttribute("scale", "0.06 0.06 0.06");
+						closeBtn.setAttribute("info", "cmd:close");
+
+						infodesc.appendChild(closeBtn);
+					}
+				});
+			}
+
+			getData("img/Front-Entrance/GS__0107.JPG");
+		</script>
+
+		<!-- VR Dropdown tutorial -->
+		<section id="vr_tutorial">
+			<button id="toggle_button">
+				<i class="fa-solid fa-caret-down fa-2xl" style="color: #000000;"></i>
+				<span>VR Tutorial</span>
+			</button>
+			<div id="user_guide" class="hide">
+				<h2>User Guide:</h2>
+				<br>
+				<div class="user_controls">
+					<h4 class="p-subhead">Icons:</h4>
+					<ul>
+						<li>
+							<img src="img/Points/hotpoint.png" alt="info icon _ user guide">
+							<span class="">: Move to next location</span>
+						</li>
+						<li>
+							<img src="img/Points/info.png" alt="move location icon _ user guide">
+							: Reveals information about object > Information box > Displays more details.
+						</li>
+						<li>
+							<img src="img/Points/search.png" alt="search icon _ user guide">
+							: Dropdown menu > Quick Search Navigation > Jump to locations fast.
+						</li>
+					</ul>
+				</div>
+				<hr class="user_divider">
+				<div class="user_controls">
+					<h4 class="p-subhead">VR Gear:</h4>
+					<ul>
+						<p>While using the VR Headset:</p>
+						<ul>
+							<li>
+								<strong>Moving around -></strong>
+							</li>
+							<li> 
+								while using the headset move your head any in direction to move the camera.
+							</li>
+							<br>
+							<li>
+								<strong>Hand Controls -></strong>
+							</li>
+							<li>
+								Selecting icons will perform an action
+							</li>
+						</ul>
+					</ul>
+				</div>
+				<hr class="user_divider">
+				<div class="user_controls">
+					<h4 class="p-subhead">Desktop:</h4>
+					<ul>
+						<p>While using the desktop version:</p>
+						<li>
+							<strong>Mouse Controls ></strong>
+						</li>
+						<li>
+							Click and drag moves the cursor around the scene.
+						</li>
+						<li>
+							hovering cursor over icons will interact with them.
+						</li>
+						<br>
+						<li>
+							W or <i class="fa-sharp fa-solid fa-arrow-up fa-xl" style="color: #000000;"></i>
+							<span class="shift_left">This will move to the next location.</span>
+						</li>
+						<li>
+							S or <i class="fa-sharp fa-solid fa-arrow-down fa-xl" style="color: #000000;"></i>
+							<span class="shift_left">This will move to the previous location.</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer id="uhi_footer">
+			<div class="footer__links">
+				<div class="site">
+					<p>Site Links</p>
+					<ul>
+						<li><a href="#">About</a></li>
+						<li><a href="#">Contact us</a></li>
+						<li><a href="#">Cookies</a></li>
+						<li><a href="#">Donate to UHI</a></li>
+						<li><a href="#">Freedom of information</a></li>
+						<li><a href="#">Gaelic</a></li>
+						<li><a href="#">News and events</a></li>
+						<li><a href="#">Open days</a></li>
+						<li><a href="#">Vacancies</a></li>
+					</ul>
+				</div>
+				<div class="partners">
+					<p>Partners</p>
+					<ul>
+						<li><a href="#">UHI Argyll</a></li>
+						<li><a href="#">UHI Inverness</a></li>
+						<li><a href="#">UHI Moray</a></li>
+						<li><a href="#">UHI North Highland</a></li>
+						<li><a href="#">UHI Orkney</a></li>
+						<li><a href="#">UHI Outer Hebrides</a></li>
+						<li><a href="#">UHI Perth</a></li>
+						<li><a href="#">UHI Shetland</a></li>
+						<li><a href="#">UHI West Highland</a></li>
+						<li><a href="#">HTC</a></li>
+						<li><a href="#">Sabhal Mòr Ostaig</a></li>
+						<li><a href="#">Scottish Association for Marine Science</a></li>
+					</ul>
+					<p>
+						<em>
+							<a href="#" class="footer-highlight">UHI</a>
+							is a diverse and flexible partnership serving
+							our communities and connected
+							to their needs. 
+						</em>
+					</p>
+				</div>
+			</div>
+			<div class="footer__socialdesk">
+				<ul>
+					<li><a href="#"><i class="fa-brands fa-facebook fa-2xl"></i></a></li>
+					<li><a href="#"><i class="fa-brands fa-square-twitter fa-2xl"></i></a></li>
+					<li><a href="#"><i class="fa-brands fa-instagram fa-2xl"></i></a></li>
+					<li><a href="#"><i class="fa-brands fa-youtube fa-2xl"></i></a></li>
+					<li><a href="#"><i class="fa-brands fa-linkedin fa-2xl"></i></a></li>
+				</ul>
+				<div class="servicedesk">
+					<p>
+						<a href="#">Service desk</a>
+					</p>
+				</div>
+			</div>
+			<hr>
+			<div class="footer__statement">
+				<div class="address">
+					<p>
+						© UHI
+						<br>
+						Registered office: 12b Ness Walk, Inverness, Scotland, IV3 5SQ
+						<br>
+						<a href="#">Contact us</a>
+						<a href="#">Accessibility Statement</a>
+					</p>
+				</div>
+				<div class="charity">
+					<p>
+						University of the Highlands and Islands, UHI, their Gaelic equivalents
+						and the mountains and water device are all trademarks
+						and/or registered trademarks of the 
+						University of the Highlands and Islands.
+						Limited company registered in Scotland No.
+						148203. Registered Scottish Charity No.
+						SC022228, VAT No. 663990005.
+					</p>
+				</div>
+			</div>
+		</footer>
+
+		<!-- Toggle button - open/close user guide -->
+		<script>
+			document.addEventListener('DOMContentLoaded', function(){
+				const toggleButton = document.getElementById('toggle_button');
+
+				toggleButton.addEventListener('click', function(){
+					const guide = document.getElementById('user_guide');
+					const icon = document.querySelector('#toggle_button i');
+
+					if(guide.classList.contains('hide')){
+						guide.classList.remove('hide');
+						toggleButton.classList.add('active');
+						icon.style.transform = 'rotate(180deg)';
+					} else{
+						guide.classList.add('hide');
+						toggleButton.classList.remove('active');
+						icon.style.transform = 'rotate(0deg)';
+					}
+				});
 			});
-		}
+		</script>
 
-		getData("img/Front-Entrance/GS__0107.JPG");
-	</script>
-
-  </body>
+	</body>
 </html>

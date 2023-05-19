@@ -104,7 +104,7 @@
 		{"photo": "img/Construction-Department/GS__0071.JPG", "destination": "img/Construction-Department/GS__0072.JPG", "position": "-50 -15 5", "rotation": "-90 0 -40"},
 		{"photo": "img/Construction-Department/GS__0071.JPG", "destination": "img/Construction-Department/GS__0069.JPG", "position": "50 -15 -5", "rotation": "-90 0 -40"},
 
-		{"photo": "img/Construction-Department/GS__0073.JPG", "destination": "img/Construction-Department/GS__0069.JPG", "position": "30 -15 -5", "rotation": "-90 0 -40"},
+		{"photo": "img/Construction-Department/GS__0073.JPG", "destination": "img/Construction-Department/GS__0069.JPG", "position": "-30 -15 -5", "rotation": "-90 0 90"},
 		{"photo": "img/Construction-Department/GS__0073.JPG", "destination": "img/Construction-Department/GS__0074.JPG", "position": "30 -15 -10", "rotation": "-90 0 -40"},
 		{"photo": "img/Construction-Department/GS__0073.JPG", "destination": "img/Construction-Department/GS__0075.JPG", "position": "30 -15 20", "rotation": "-90 0 -40"},
 		{"photo": "img/Construction-Department/GS__0073.JPG", "destination": "img/Construction-Department/GS__0077.JPG", "position": "10 -15 -30", "rotation": "-90 0 -40"},
