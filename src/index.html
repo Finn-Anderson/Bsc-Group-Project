@@ -6,7 +6,8 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		
+		<title>VR Tour - UHI Shetland</title>
+		<link rel="icon" type="image/x-icon" href="img/uhi-logo-icon.png">
 		<!-- META TAGS START-->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<!-- META TAGS END-->
@@ -64,6 +65,7 @@
 				<img id="informationpointBackground" src="img/Points/desc-box.png"/>
 				<img id="informationpointClose" src="img/Points/desc-close.png"/>
 				<img id="search" src="img/Points/search.png">
+				<img id="cursor" src="img/cursor.svg">
 				<!-- ASSESTS END-->
 
 				<!-- A-SKY START-->
@@ -72,15 +74,19 @@
 
 				<!-- CAMERA START-->
 				<a-camera id="camera" position="0 1.6 0" look-controls camera fov="90">
-					<a-entity id="cursor" cursor="fuse: true; fuseTimeout: 500" position="0 0 -1" geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03" material="color: black; shader: flat"></a-entity>
+					<a-entity cursor="fuse: true; fuseTimeout: 500" material="opacity: 0;" position="0 0 -1"></a-entity>
+					<a-image src="#cursor" position="0 0 -.99" alpha-test="0.4" scale="0.04 0.04 0.04"></a-image>
+
 					<a-entity position="-0.85 0.725 -1">
 						<a-image src="img/Points/location-pin.png" scale="0.06 0.06 0.06" position="-0.54 0 0"></a-image>
-						<a-entity id="location" text="value: Front-Entrance"></a-entity>
+						<a-entity id="location" text="value: Front-Entrance" alpha-test="0.4"></a-entity>
 					</a-entity>
+
 					<a-entity id="loading" text="value: Loading...;" position="0.41 -0.08 -1" visible="false"></a-entity>
 				</a-camera>
 				<!-- CAMERA END-->
 
+				<!-- QUICK NAVIGATION START -->
 				<a-entity position="0 1.6 -5" look-at="#camera" nav-controller>
 					<a-image src="#search" width="0.6" height="0.6" position="0 0 0" nav></a-image>
 
@@ -89,14 +95,14 @@
 						<a-entity 
 							position="-0.8 0.8 0" text="value: Front Entrance; align: center; width: 3"
 							geometry="primitive: plane; width: 1.2; height: 0.3"
-							material="color: #333; opacity: 0.4; transparent: true"
+							material="color: #000;"
 							hotpoint="room:img/Front-Entrance/GS__0107.JPG" nav
 						></a-entity>
 
 						<a-entity 
 							position="0.8 0.8 0" text="value: Cafeteria; align: center; width: 3"
 							geometry="primitive: plane; width: 1.2; height: 0.3"
-							material="color: #333; opacity: 0.4; transparent: true"
+							material="color: #000;"
 							hotpoint="room:img/Cafeteria/GS__0100.JPG" nav
 						></a-entity>
 						<!-- CORE - END -->
@@ -105,14 +111,14 @@
 						<a-entity 
 							position="-0.8 -0.2 0" text="value: B Block Top; align: center; width: 3"
 							geometry="primitive: plane; width: 1.2; height: 0.3"
-							material="color: #333; opacity: 0.4; transparent: true"
+							material="color: #000;"
 							hotpoint="room:img/B-Block-top floor/GS__0049.JPG" nav
 						></a-entity>
 
 						<a-entity 
 							position="-0.8 -0.6 0" text="value: B Block Bottom; align: center; width: 3"
 							geometry="primitive: plane; width: 1.2; height: 0.3"
-							material="color: #333; opacity: 0.4; transparent: true"
+							material="color: #000;"
 							hotpoint="room:img/B-Block-bottom/GS__0089.JPG" nav
 						></a-entity>
 						<!-- BLOCKS - END -->
@@ -121,19 +127,20 @@
 						<a-entity 
 							position="0.8 -0.2 0" text="value: Computing Dept; align: center; width: 3"
 							geometry="primitive: plane; width: 1.2; height: 0.3"
-							material="color: #333; opacity: 0.4; transparent: true"
+							material="color: #000;"
 							hotpoint="room:img/Computing-Department/GS__0044.JPG" nav
 						></a-entity>
 
 						<a-entity 
 							position="0.8 -0.6 0" text="value: Construction Dept; align: center; width: 3"
 							geometry="primitive: plane; width: 1.2; height: 0.3"
-							material="color: #333; opacity: 0.4; transparent: true"
+							material="color: #000;"
 							hotpoint="room:img/Construction-Department/GS__0062.JPG" nav
 						></a-entity>
 						<!-- DEPT - END -->
 					</a-entity>
 				</a-entity>
+				<!-- QUICK NAVIGATION END -->
 
 				<!-- OCULUS TOUCH-CONTROLS START -->
 				<a-entity laser-controls="hand: right"></a-entity>

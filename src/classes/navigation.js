@@ -14,8 +14,6 @@ AFRAME.registerComponent('nav', {
 
 		function hideNav() {
 			dropdown.setAttribute("scale", "0 0 0");
-
-			toggle.setAttribute("nav", "cmd:open");
 		}
 
 		this.setNav = function() {
