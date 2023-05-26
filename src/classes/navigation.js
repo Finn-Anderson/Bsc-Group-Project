@@ -29,5 +29,23 @@ AFRAME.registerComponent('nav', {
 	},
 	remove: function() {
 		this.el.removeEventListener('click', this.setNav);
+	},
+	curLoc: function(newSky) {
+		var pathList = newSky.split("/");
+
+		var curLoc = document.querySelectorAll('[selected]');
+		var newLoc = document.getElementById(pathList[pathList.length - 2]);
+
+		if (curLoc != newLoc) {
+			if (curLoc.length > 0) {
+				curLoc[0].setAttribute("material", "color: #000");
+				curLoc[0].removeAttribute("selected");
+			}
+
+			if (newLoc) {
+				newLoc.setAttribute("material", "color: #7655D2");
+				newLoc.setAttribute("selected");
+			}
+		}
 	}
 })

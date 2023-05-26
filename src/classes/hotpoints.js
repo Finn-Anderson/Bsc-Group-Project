@@ -11,6 +11,11 @@ AFRAME.registerComponent('hotpoint', {
 
 	init: function() {
 		var newSky = this.data.room;
+		var nav;
+
+		this.el.addEventListener("loaded", evt => {
+			nav = document.querySelector('[nav]').components.nav;
+		});
 
 		this.setSky = function() {
 			var sky = document.querySelector('#img-360');
@@ -22,9 +27,7 @@ AFRAME.registerComponent('hotpoint', {
 			const loading = document.getElementById("loading");
 			loading.setAttribute("visible", true);
 
-			var pathList = newSky.split("/");
-			const location = document.getElementById("location");
-			location.setAttribute("text", "value: " + pathList[pathList.length - 2]);
+			nav.curLoc(newSky);
 
 			getData(newSky);
 		}

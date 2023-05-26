@@ -64,8 +64,8 @@
 				<img id="informationpoint" src="img/Points/info.png"/>
 				<img id="informationpointBackground" src="img/Points/desc-box.png"/>
 				<img id="informationpointClose" src="img/Points/desc-close.png"/>
-				<img id="search" src="img/Points/search.png">
 				<img id="cursor" src="img/cursor.svg">
+				<img id="locationPin" src="img/Points/location-pin.png">
 				<!-- ASSESTS END-->
 
 				<!-- A-SKY START-->
@@ -77,29 +77,26 @@
 					<a-entity cursor="fuse: true; fuseTimeout: 500" material="opacity: 0;" position="0 0 -1"></a-entity>
 					<a-image src="#cursor" position="0 0 -.99" alpha-test="0.4" scale="0.04 0.04 0.04"></a-image>
 
-					<a-entity position="-0.85 0.725 -1">
-						<a-image src="img/Points/location-pin.png" scale="0.06 0.06 0.06" position="-0.54 0 0"></a-image>
-						<a-entity id="location" text="value: Front-Entrance" alpha-test="0.4"></a-entity>
-					</a-entity>
-
 					<a-entity id="loading" text="value: Loading...;" position="0.41 -0.08 -1" visible="false"></a-entity>
 				</a-camera>
 				<!-- CAMERA END-->
 
 				<!-- QUICK NAVIGATION START -->
 				<a-entity position="0 1.6 -5" look-at="#camera" nav-controller>
-					<a-image src="#search" width="0.6" height="0.6" position="0 0 0" nav></a-image>
+					<a-image src="#locationPin" width="0.6" height="0.6" position="0 0 0" nav></a-image>
 
 					<a-entity id="dropdown" class="nav-dropdown" position="0 -0.3 0" scale="0 0 0">
 						<!-- CORE - START -->
 						<a-entity 
+							id="Front-Entrance"
 							position="-0.8 0.8 0" text="value: Front Entrance; align: center; width: 3"
 							geometry="primitive: plane; width: 1.2; height: 0.3"
-							material="color: #000;"
-							hotpoint="room:img/Front-Entrance/GS__0107.JPG" nav
+							material="color: #7655D2;"
+							hotpoint="room:img/Front-Entrance/GS__0107.JPG" nav selected
 						></a-entity>
 
 						<a-entity 
+							id="Cafeteria"
 							position="0.8 0.8 0" text="value: Cafeteria; align: center; width: 3"
 							geometry="primitive: plane; width: 1.2; height: 0.3"
 							material="color: #000;"
@@ -109,6 +106,7 @@
 
 						<!-- BLOCKS - START -->
 						<a-entity 
+							id="B-Block-top floor"
 							position="-0.8 -0.2 0" text="value: B Block Top; align: center; width: 3"
 							geometry="primitive: plane; width: 1.2; height: 0.3"
 							material="color: #000;"
@@ -116,6 +114,7 @@
 						></a-entity>
 
 						<a-entity 
+							id="B-Block-bottom"
 							position="-0.8 -0.6 0" text="value: B Block Bottom; align: center; width: 3"
 							geometry="primitive: plane; width: 1.2; height: 0.3"
 							material="color: #000;"
@@ -125,6 +124,7 @@
 
 						<!-- DEPT - START -->
 						<a-entity 
+							id="Computing-Department"
 							position="0.8 -0.2 0" text="value: Computing Dept; align: center; width: 3"
 							geometry="primitive: plane; width: 1.2; height: 0.3"
 							material="color: #000;"
@@ -132,6 +132,7 @@
 						></a-entity>
 
 						<a-entity 
+							id="Construction-Department"
 							position="0.8 -0.6 0" text="value: Construction Dept; align: center; width: 3"
 							geometry="primitive: plane; width: 1.2; height: 0.3"
 							material="color: #000;"
@@ -174,7 +175,7 @@
 							: Reveals information about object > Information box > Displays more details.
 						</li>
 						<li>
-							<img src="img/Points/search.png" alt="search icon _ user guide">
+							<img src="img/Points/location-pin.png" alt="search icon _ user guide">
 							: Dropdown menu > Quick Search Navigation > Jump to locations fast.
 						</li>
 					</ul>
