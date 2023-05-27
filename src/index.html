@@ -57,7 +57,7 @@
 		
 		<!-- VR MODEL -->
 		<div id="embeddedScene">
-			<a-scene embedded cursor="rayOrigin: mouse">
+			<a-scene embedded raycaster="objects: .interactable" cursor="rayOrigin: mouse">
 
 				<!-- ASSESTS START-->
 				<img id="hotpoint" src="img/Points/hotpoint.png"/>
@@ -80,12 +80,12 @@
 
 				<!-- QUICK NAVIGATION START -->
 				<a-entity position="-1.6 1.6 -5" look-at="#camera" nav-controller>
-					<a-image src="#locationPin" width="0.6" height="0.6" position="0 0 0" nav></a-image>
+					<a-image class="interactable" src="#locationPin" width="0.6" height="0.6" position="0 0 0" nav></a-image>
 
 					<a-entity id="dropdown" class="nav-dropdown" position="0 -0.3 0" scale="0 0 0">
 						<!-- CORE - START -->
 						<a-entity 
-							id="Front-Entrance"
+							id="Front-Entrance" class="interactable"
 							position="-0.8 0.8 0" text="value: Front Entrance; align: center; width: 3"
 							geometry="primitive: plane; width: 1.2; height: 0.3"
 							material="color: #7655D2;"
@@ -93,7 +93,7 @@
 						></a-entity>
 
 						<a-entity 
-							id="Cafeteria"
+							id="Cafeteria" class="interactable"
 							position="0.8 0.8 0" text="value: Cafeteria; align: center; width: 3"
 							geometry="primitive: plane; width: 1.2; height: 0.3"
 							material="color: #000;"
@@ -103,7 +103,7 @@
 
 						<!-- BLOCKS - START -->
 						<a-entity 
-							id="B-Block-top floor"
+							id="B-Block-top floor" class="interactable"
 							position="-0.8 -0.2 0" text="value: B Block Top; align: center; width: 3"
 							geometry="primitive: plane; width: 1.2; height: 0.3"
 							material="color: #000;"
@@ -111,7 +111,7 @@
 						></a-entity>
 
 						<a-entity 
-							id="B-Block-bottom"
+							id="B-Block-bottom" class="interactable"
 							position="-0.8 -0.6 0" text="value: B Block Bottom; align: center; width: 3"
 							geometry="primitive: plane; width: 1.2; height: 0.3"
 							material="color: #000;"
@@ -121,7 +121,7 @@
 
 						<!-- DEPT - START -->
 						<a-entity 
-							id="Computing-Department"
+							id="Computing-Department" class="interactable"
 							position="0.8 -0.2 0" text="value: Computing Dept; align: center; width: 3"
 							geometry="primitive: plane; width: 1.2; height: 0.3"
 							material="color: #000;"
@@ -129,7 +129,7 @@
 						></a-entity>
 
 						<a-entity 
-							id="Construction-Department"
+							id="Construction-Department" class="interactable"
 							position="0.8 -0.6 0" text="value: Construction Dept; align: center; width: 3"
 							geometry="primitive: plane; width: 1.2; height: 0.3"
 							material="color: #000;"

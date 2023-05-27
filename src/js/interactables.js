@@ -10,18 +10,19 @@ function getData(location) {
 		const data = JSON.parse(json);
 
 		const sky = document.getElementById("img-360");
-		$(sky).attr("src", data.img);
+		sky.setAttribute("src", data.img);
 
 		const loading = document.getElementById("loading");
 		loading.setAttribute("visible", false);
 
 		for (var i = 0; i < data.hpImg.length; i++) {
 			const hotpoint = document.createElement("a-image");
-			$(hotpoint).attr("src", "#hotpoint");
-			$(hotpoint).attr("hotpoint", "room:" + data.hpImg[i]);
-			$(hotpoint).attr("position", data.hpPos[i]);
-			$(hotpoint).attr("rotation", data.hpRot[i]);
-			$(hotpoint).attr("scale", "5 5 5");
+			hotpoint.setAttribute("class", "interactable");
+			hotpoint.setAttribute("src", "#hotpoint");
+			hotpoint.setAttribute("hotpoint", "room:" + data.hpImg[i]);
+			hotpoint.setAttribute("position", data.hpPos[i]);
+			hotpoint.setAttribute("rotation", data.hpRot[i]);
+			hotpoint.setAttribute("scale", "5 5 5");
 
 			root.appendChild(hotpoint);
 		}
@@ -31,6 +32,7 @@ function getData(location) {
 			root.appendChild(wrapper);
 
 			const infopoint = document.createElement("a-image");
+			infopoint.setAttribute("class", "interactable");
 			infopoint.setAttribute("src", "#informationpoint");
 			infopoint.setAttribute("position", data.infoPos[i]);
 			infopoint.setAttribute("look-at", "#camera");
@@ -66,6 +68,7 @@ function getData(location) {
 			}
 
 			const closeBtn = document.createElement("a-image");
+			closeBtn.setAttribute("class", "interactable");
 			closeBtn.setAttribute("src", "#informationpointClose");
 			closeBtn.setAttribute("position", "0.43 0.43 0.01");
 			closeBtn.setAttribute("scale", "0.06 0.06 0.06");
