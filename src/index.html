@@ -64,7 +64,7 @@
 				<img id="informationpoint" src="img/Points/info.png"/>
 				<img id="informationpointBackground" src="img/Points/desc-box.png"/>
 				<img id="informationpointClose" src="img/Points/desc-close.png"/>
-				<img id="cursor" src="img/cursor.svg">
+				<img id="cursor" src="img/cursor.svg" width="256" height="256">
 				<img id="locationPin" src="img/Points/location-pin.png">
 				<!-- ASSESTS END-->
 
@@ -73,7 +73,7 @@
 				<!-- A-SKY END-->
 
 				<!-- CAMERA START-->
-				<a-camera id="camera" position="0 1.6 0" look-controls camera fov="90">
+				<a-camera id="camera" position="0 1.6 0" look-controls="reverseMouseDrag: true; reverseTouchDrag: true;" camera fov="90">
 					<a-entity cursor="fuse: true; fuseTimeout: 500" material="opacity: 0;" position="0 0 -1"></a-entity>
 					<a-image src="#cursor" position="0 0 -.99" alpha-test="0.4" scale="0.04 0.04 0.04"></a-image>
 
@@ -82,7 +82,7 @@
 				<!-- CAMERA END-->
 
 				<!-- QUICK NAVIGATION START -->
-				<a-entity position="0 1.6 -5" look-at="#camera" nav-controller>
+				<a-entity position="-1.6 1.6 -5" look-at="#camera" nav-controller>
 					<a-image src="#locationPin" width="0.6" height="0.6" position="0 0 0" nav></a-image>
 
 					<a-entity id="dropdown" class="nav-dropdown" position="0 -0.3 0" scale="0 0 0">
