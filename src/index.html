@@ -73,7 +73,7 @@
 				<!-- A-SKY END-->
 
 				<!-- CAMERA START-->
-				<a-camera id="camera" position="0 1.6 0" look-controls="reverseMouseDrag: true; reverseTouchDrag: true;" camera fov="90">
+				<a-camera id="camera" position="0 1.6 0" look-controls="reverseMouseDrag: true; reverseTouchDrag: true;" camera>
 					<a-entity id="loading" text="value: Loading...;" position="0.41 -0.08 -1" visible="false"></a-entity>
 				</a-camera>
 				<!-- CAMERA END-->
@@ -141,7 +141,7 @@
 				<!-- QUICK NAVIGATION END -->
 
 				<!-- OCULUS TOUCH-CONTROLS START -->
-				<a-entity laser-controls="hand: right"></a-entity>
+				<a-entity hand-controls raycaster="objects: .interactable"></a-entity>
 				<!-- OCULUS TOUCH-CONTROLS END -->
 
 				<!-- HOTPOINT NAVIGATION START-->
@@ -150,6 +150,8 @@
 			</a-scene>
 		</div>
 		<script src="js/interactables.js"></script>
+		<script src="js/scroll-lock.js"></script>
+		<script src="js/fov.js"></script>
 
 		<!-- VR Dropdown tutorial -->
 		<section id="vr_tutorial">
@@ -211,7 +213,10 @@
 							Click and drag moves the cursor around the scene.
 						</li>
 						<li>
-							hovering cursor over icons will interact with them.
+							Clicking on icons will interact with them.
+						</li>
+						<li>
+							Scrolling up or down will zoom the camera in and out respectively.
 						</li>
 						<br>
 						<li>
