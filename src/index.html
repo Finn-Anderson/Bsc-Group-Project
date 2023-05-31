@@ -73,7 +73,7 @@
 				<!-- A-SKY END-->
 
 				<!-- CAMERA START-->
-				<a-camera id="camera" position="0 1.6 0" look-controls="reverseMouseDrag: true; reverseTouchDrag: true;" camera>
+				<a-camera id="camera" position="0 1.6 0" look-controls="reverseMouseDrag: true; reverseTouchDrag: true;" camera wasd-controls="enabled:false;">
 					<a-entity id="loading" text="value: Loading...;" position="0.41 -0.08 -1" visible="false"></a-entity>
 				</a-camera>
 				<!-- CAMERA END-->
@@ -89,7 +89,7 @@
 							position="-0.8 0.8 0" text="value: Front Entrance; align: center; width: 3"
 							geometry="primitive: plane; width: 1.2; height: 0.3"
 							material="color: #7655D2;"
-							hotpoint="room:img/Front-Entrance/GS__0107.JPG" nav selected
+							hotpoint="room:img/Front-Entrance/GS__0107.JPG" selected
 						></a-entity>
 
 						<a-entity 
@@ -97,7 +97,7 @@
 							position="0.8 0.8 0" text="value: Cafeteria; align: center; width: 3"
 							geometry="primitive: plane; width: 1.2; height: 0.3"
 							material="color: #000;"
-							hotpoint="room:img/Cafeteria/GS__0100.JPG" nav
+							hotpoint="room:img/Cafeteria/GS__0100.JPG"
 						></a-entity>
 						<!-- CORE - END -->
 
@@ -107,7 +107,7 @@
 							position="-0.8 -0.2 0" text="value: B Block Top; align: center; width: 3"
 							geometry="primitive: plane; width: 1.2; height: 0.3"
 							material="color: #000;"
-							hotpoint="room:img/B-Block-top floor/GS__0049.JPG" nav
+							hotpoint="room:img/B-Block-top floor/GS__0049.JPG"
 						></a-entity>
 
 						<a-entity 
@@ -115,7 +115,7 @@
 							position="-0.8 -0.6 0" text="value: B Block Bottom; align: center; width: 3"
 							geometry="primitive: plane; width: 1.2; height: 0.3"
 							material="color: #000;"
-							hotpoint="room:img/B-Block-bottom/GS__0089.JPG" nav
+							hotpoint="room:img/B-Block-bottom/GS__0089.JPG"
 						></a-entity>
 						<!-- BLOCKS - END -->
 
@@ -125,7 +125,7 @@
 							position="0.8 -0.2 0" text="value: Computing Dept; align: center; width: 3"
 							geometry="primitive: plane; width: 1.2; height: 0.3"
 							material="color: #000;"
-							hotpoint="room:img/Computing-Department/GS__0044.JPG" nav
+							hotpoint="room:img/Computing-Department/GS__0044.JPG"
 						></a-entity>
 
 						<a-entity 
@@ -133,7 +133,7 @@
 							position="0.8 -0.6 0" text="value: Construction Dept; align: center; width: 3"
 							geometry="primitive: plane; width: 1.2; height: 0.3"
 							material="color: #000;"
-							hotpoint="room:img/Construction-Department/GS__0062.JPG" nav
+							hotpoint="room:img/Construction-Department/GS__0062.JPG"
 						></a-entity>
 						<!-- DEPT - END -->
 					</a-entity>

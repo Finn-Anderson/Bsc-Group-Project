@@ -39,6 +39,7 @@ body{
     color: var(--uhi_white);
     font-size: 1rem;
     font-family: Arial, Helvetica, sans-serif;
+    overflow: overlay;
 }
 
 /* ######################################################################################## */
