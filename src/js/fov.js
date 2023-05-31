@@ -1,38 +1,13 @@
 var multiplier = 1;
-var target = multiplier;
-var timer;
+const cam = document.getElementById("camera");
+
 window.addEventListener('wheel', e => {
 	if (lock) {
-		target += (e.deltaY / 500);
-		target = Math.min(Math.max(target, 0.25), 1);
-		target = Math.round((target + Number.EPSILON) * 100) / 100;
+		multiplier += (e.deltaY / 500);
+		multiplier = Math.min(Math.max(multiplier, 0.25), 1);
+		multiplier = Math.round((multiplier + Number.EPSILON) * 100) / 100;
 
-		if (target != multiplier) {
-			var blur = document.querySelector("canvas");
-			blur.style.filter = "blur(1px)";
-
-			var diff = multiplier - target;
-
-			if (timer) {
-				clearInterval(timer);
-			}
-
-			var i = 100;
-			var multi = multiplier;
-			timer = setInterval(function () {
-				var perc = i / 100;
-				multiplier = multi - (diff * (1 - (perc * perc)));
-				multiplier = Math.round((multiplier + Number.EPSILON) * 100) / 100;
-				fov();
-
-				if (multiplier == target) {
-					clearInterval(timer);
-					timer = null;
-					blur.style.filter = "none";
-				}
-				i--;
-			}, 1);
-		}
+		fov();
 	}
 })
 
@@ -47,7 +22,8 @@ function fov() {
 	if (prevHeight != height || prevMultiplier != multiplier) {
 		var fov = (height / width) * 160 * multiplier;
 
-		document.getElementById("camera").setAttribute("fov", fov);
+		cam.setAttribute("animation", "to", fov);
+		cam.emit("fov");
 
 		prevHeight = height;
 		prevMultiplier = multiplier;
