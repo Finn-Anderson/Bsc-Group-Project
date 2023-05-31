@@ -11,23 +11,16 @@ AFRAME.registerComponent('hotpoint', {
 
 	init: function() {
 		var newSky = this.data.room;
-		var nav;
-
-		this.el.addEventListener("loaded", evt => {
-			nav = document.querySelector('[nav]').components.nav;
-		});
 
 		this.setSky = function() {
 			var sky = document.querySelector('#img-360');
-			sky.setAttribute("src", newSky);
-				
+			sky.emit("hide");
+						
 			const root = document.getElementById("blocks");
 			root.innerHTML = "";
 
 			const loading = document.getElementById("loading");
 			loading.setAttribute("visible", true);
-
-			nav.curLoc(newSky);
 
 			getData(newSky);
 		}
@@ -36,5 +29,16 @@ AFRAME.registerComponent('hotpoint', {
 	},
 	remove: function() {
 		this.el.removeEventListener('click', this.setSky);
+	},
+	clear: function(newSky) {
+		if (newSky != "") {
+			var sky = document.querySelector('#img-360');
+			sky.setAttribute("src", newSky);
+
+			var nav = document.querySelector('[nav]').components.nav;
+			nav.curLoc(newSky);
+
+			sky.emit("show");
+		}
 	}
 })

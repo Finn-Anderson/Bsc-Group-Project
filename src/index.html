@@ -66,15 +66,16 @@
 				<img id="informationpointClose" src="img/Points/desc-close.png"/>
 				<img id="cursor" src="img/cursor.svg" width="256" height="256">
 				<img id="locationPin" src="img/Points/location-pin.png">
+				<img id="loadingImg" src="img/Points/loading.png">
 				<!-- ASSESTS END-->
 
 				<!-- A-SKY START-->
-				<a-sky id="img-360" src=""></a-sky>
+				<a-sky id="img-360" src="" animation__hide="property: components.material.material.color; type: color; from: #FFF; to: #aaa; dur: 300; startEvents: hide" animation__show="property: components.material.material.color; type: color; from: #aaa; to: #FFF; dur: 500; startEvents: show"></a-sky>
 				<!-- A-SKY END-->
 
 				<!-- CAMERA START-->
 				<a-camera id="camera" position="0 1.6 0" look-controls="reverseMouseDrag: true; reverseTouchDrag: true;" camera wasd-controls="enabled:false;" animation="property: camera.fov; to: 90; dur: 300; easing: easeInOutSine; startEvents: fov">
-					<a-entity id="loading" text="value: Loading...;" position="0.41 -0.08 -1" visible="false"></a-entity>
+					<a-image id="loading" src="#loadingImg" position="0 0 -1" visible="false" scale="0.06 0.06 0.06" alpha-test="0.5" animation="property: rotation; to: 0 0 -10800000; loop: true; dur: 10000000"></a-image>
 				</a-camera>
 				<!-- CAMERA END-->
 
