@@ -1,12 +1,12 @@
 {
 	"hotpoints": [
-		{"photo": "img/Front-Entrance/GS__0107.JPG", "destination": "img/Front-Entrance/GS__0106.JPG", "position": "15 -20 -10", "rotation": "-90 0 -40"},
+		{"photo": "img/Front-Entrance/GS__0107.JPG", "destination": "img/Front-Entrance/GS__0106.JPG", "position": "3.5 -3 -3", "rotation": "-90 0 -40"},
 
-		{"photo": "img/Front-Entrance/GS__0106.JPG", "destination": "img/Front-Entrance/GS__0107.JPG", "position": "-12 -30 0", "rotation": "-90 0 -40"},
-		{"photo": "img/Front-Entrance/GS__0106.JPG", "destination": "img/Front-Entrance/GS__0105.JPG", "position": "40 -15 8", "rotation": "-90 0 250"},
+		{"photo": "img/Front-Entrance/GS__0106.JPG", "destination": "img/Front-Entrance/GS__0107.JPG", "position": "-2 -3 0", "rotation": "-90 0 100"},
+		{"photo": "img/Front-Entrance/GS__0106.JPG", "destination": "img/Front-Entrance/GS__0105.JPG", "position": "7 -1.5 1", "rotation": "-90 0 250"},
 
-		{"photo": "img/Front-Entrance/GS__0105.JPG", "destination": "img/Front-Entrance/GS__0106.JPG", "position": "-40 -15 10", "rotation": "-90 0 -50"},
-		{"photo": "img/Front-Entrance/GS__0105.JPG", "destination": "img/Front-Entrance/GS__0103.JPG", "position": "40 -15 -10", "rotation": "-90 0 -50"},
+		{"photo": "img/Front-Entrance/GS__0105.JPG", "destination": "img/Front-Entrance/GS__0106.JPG", "position": "-6 -1.5 1", "rotation": "-90 0 120"},
+		{"photo": "img/Front-Entrance/GS__0105.JPG", "destination": "img/Front-Entrance/GS__0103.JPG", "position": "7 -1.5 -2", "rotation": "-90 0 -50"},
 
 		{"photo": "img/Front-Entrance/GS__0103.JPG", "destination": "img/Front-Entrance/GS__0105.JPG", "position": "-30 -15 -5", "rotation": "-90 0 -50"},
 		{"photo": "img/Front-Entrance/GS__0103.JPG", "destination": "img/Front-Entrance/GS__0102.JPG", "position": "0 -15 -50", "rotation": "-90 0 -50"},

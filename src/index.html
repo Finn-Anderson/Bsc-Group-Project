@@ -18,6 +18,7 @@
 		<script src="classes/hotpoints.js"></script>
 		<script src="classes/info.js"></script>
 		<script src="classes/navigation.js"></script>
+		<script src="classes/tooltip.js"></script>
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 		<!-- EXTERNAL JAVASCRIPT END -->
@@ -82,7 +83,7 @@
 
 				<!-- QUICK NAVIGATION START -->
 				<a-entity position="-1.6 1.6 -5" look-at="#camera" nav-controller>
-					<a-image class="interactable" src="#locationPin" width="0.6" height="0.6" position="0 0 0" nav></a-image>
+					<a-image class="interactable" src="#locationPin" width="0.6" height="0.6" position="0 0 0" nav tooltip></a-image>
 
 					<a-entity id="dropdown" class="nav-dropdown" position="0 -0.3 0" scale="0 0 0">
 						<!-- CORE - START -->
@@ -147,7 +148,7 @@
 				<!-- OCULUS TOUCH-CONTROLS END -->
 
 				<!-- TRIPOD COVER START -->
-				<a-image src="#tripod" position="0 -1 0" rotation="-90 0 0" scale="1.5 1.5 1.5"></a-image>
+				<a-image src="#tripod" position="0 -1 0" look-at="#camera" scale="1.5 1.5 1.5"></a-image>
 				<!-- TRIPOD COVER END -->
 
 				<!-- HOTPOINT NAVIGATION START-->
