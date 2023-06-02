@@ -7,7 +7,7 @@ function LockScroll() {
 
 function UnlockScroll() {
 	lock = false;
-	document.querySelector("body").style.overflow = "overlay";
+	document.querySelector("body").style.overflow = "auto";
 }
 
 var canvas = document.querySelector("canvas");
