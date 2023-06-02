@@ -8,8 +8,10 @@ window.addEventListener('wheel', e => {
 		multiplier = Math.round((multiplier + Number.EPSILON) * 100) / 100;
 
 		fov();
+
+		e.preventDefault();
 	}
-})
+}, {passive: false})
 
 // Altering base FOV for clarity purposes.
 var prevHeight = 0;
