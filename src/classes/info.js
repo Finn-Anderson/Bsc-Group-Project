@@ -15,13 +15,13 @@ AFRAME.registerComponent('info', {
 		function displayInfo(hotpoint) {
 			hotpoint.setAttribute("scale", "10 10 10");
 
-			hotpoint.previousElementSibling.setAttribute("visible", "false");
+			hotpoint.previousElementSibling.setAttribute("scale", "0 0 0");
 		}
 
 		function hideInfo(hotpoint) {
 			hotpoint.setAttribute("scale", "0 0 0");
 
-			hotpoint.previousElementSibling.setAttribute("visible", "true");
+			hotpoint.previousElementSibling.setAttribute("scale", "1 1 1");
 		}
 
 		this.setInfo = function() {
