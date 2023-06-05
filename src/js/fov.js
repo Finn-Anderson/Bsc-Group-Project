@@ -39,5 +39,6 @@ function fov() {
 	}
 }
 
-new ResizeObserver(fov).observe(canvas);
-fov();
+document.querySelector('a-scene').addEventListener('loaded', function () {
+	new ResizeObserver(fov).observe(canvas);
+})
