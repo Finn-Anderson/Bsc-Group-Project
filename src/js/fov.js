@@ -11,18 +11,25 @@ window.addEventListener('wheel', e => {
 
 		e.preventDefault();
 	}
-}, {passive: false})
+}, {passive: false});
 
 // Altering base FOV for clarity purposes.
 var prevHeight = 0;
 var prevMultiplier = 1;
+var canvas = document.querySelector("canvas");
 
 function fov() {
-	var height = document.querySelector("canvas").offsetHeight;
-	var width = document.querySelector("canvas").offsetWidth;
+	var height = canvas.offsetHeight;
+	var width = canvas.offsetWidth;
 
 	if (prevHeight != height || prevMultiplier != multiplier) {
 		var fov = (height / width) * 160 * multiplier;
+		fov = Math.min(fov, 90);
+		fov *= multiplier;
+
+		let mycam = cam.getAttribute("camera");
+		mycam.aspect = cam.getObject3D('camera').aspect;
+		cam.setAttribute("camera", mycam);
 
 		cam.setAttribute("animation", "to", fov);
 		cam.emit("fov");
@@ -32,5 +39,5 @@ function fov() {
 	}
 }
 
-window.addEventListener("resize", fov);
+new ResizeObserver(fov).observe(canvas);
 fov();
