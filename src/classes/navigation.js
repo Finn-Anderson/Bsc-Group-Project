@@ -62,7 +62,11 @@ AFRAME.registerComponent('nav', {
 				var curChilds = curLoc.children;
 
 				for (const el of curChilds) {
-					el.setAttribute("material", "color: #FFF");
+					if (!el.nextElementSibling) {
+						el.setAttribute("text", "color: #000");
+					} else {
+						el.setAttribute("material", "color: #FFF");
+					}
 				}
 			}
 
@@ -70,7 +74,11 @@ AFRAME.registerComponent('nav', {
 			var newChilds = newLoc.children;
 
 			for (const el of newChilds) {
-				el.setAttribute("material", "color: #7655D2");
+				if (!el.nextElementSibling) {
+					el.setAttribute("text", "color: #FFF");
+				} else {
+					el.setAttribute("material", "color: #7655D2");
+				}
 			}
 		}
 	}

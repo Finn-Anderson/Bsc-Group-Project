@@ -87,25 +87,33 @@
 				<a-entity position="-1.6 1.6 -5" look-at="#camera" nav-controller>
 					<a-image id="locationImg" class="interactable" src="#locationPin" width="0.6" height="0.6" position="0 0 0" nav="cmd:open" tooltip></a-image>
 
-					<a-entity id="dropdown" class="nav-dropdown" position="0 0 0.1" scale="0 0 0" geometry="primitive: plane; width: 6; height: 4" material="color: #000;">
-						<a-image class="interactable" src="#informationpointClose" position="1.8 1.8 0.01" scale="0.25 0.25 0.25" nav="cmd:close" tooltip></a-image>
-						<a-entity id="switch" class="interactable" position="1.3961 -2.146 0.01" text="value: Switch Floor; align: center; width: 3" geometry="primitive: plane; width: 1.2; height: 0.3" material="color: #000;" switch tooltip></a-entity>
+					<a-entity id="dropdown" class="nav-dropdown" position="0 0 0.1" scale="0 0 0" geometry="primitive: plane; width: 4.5; height: 4" material="color: #000;">
+						<a-image class="interactable" src="#informationpointClose" position="2 1.8 0.01" scale="0.25 0.25 0.25" nav="cmd:close" tooltip></a-image>
+						<a-entity id="switch" class="interactable" position="1.6457 -2.146 0.01" text="value: Switch Floor; align: center; width: 3" geometry="primitive: plane; width: 1.2; height: 0.3" material="color: #000;" switch tooltip></a-entity>
 
-						<a-entity id="Front-Entrance" class="bottom-floor" position="-0.8 0 0.01" selected>
+						<a-entity id="Front-Entrance" class="bottom-floor" position="-0.3 0 0.01" selected>
 							<a-entity class="interactable" position="0 0 0" geometry="primitive: plane; width: 0.8; height: 0.6" material="color: #7655D2;" hotpoint="room:img/Front-Entrance/GS__0107.JPG"></a-entity>
+							<a-entity class="interactable" position="1.65 0 0.2" text="value: Entrance; color: #FFF" scale="4 4 4" hotpoint="room:img/Front-Entrance/GS__0107.JPG"></a-entity>
 						</a-entity>
 
-						<a-entity id="Cafeteria" class="bottom-floor" position="0 0.5 0">
-							<a-entity class="interactable" position="-0.64 0 0.1" geometry="primitive: plane; width: 0.5; height: 0.3" material="color: #FFF;" hotpoint="room:img/Cafeteria/GS__0100.JPG"></a-entity>
-							<a-entity class="interactable" position="0.1 0.25 0.1" geometry="primitive: plane; width: 1; height: 0.8" material="color: #FFF;" hotpoint="room:img/Cafeteria/GS__0100.JPG"></a-entity>
+						<a-entity id="Cafeteria" class="bottom-floor" position="0.6 0.5 0">
+							<a-entity class="interactable" position="-0.64 0 0.1" geometry="primitive: plane; width: 0.4; height: 0.3" material="color: #FFF;" hotpoint="room:img/Cafeteria/GS__0100.JPG"></a-entity>
+							<a-entity class="interactable" position="0.05 0.25 0.1" geometry="primitive: plane; width: 1.1; height: 0.8" material="color: #FFF;" hotpoint="room:img/Cafeteria/GS__0100.JPG"></a-entity>
+							<a-entity class="interactable" position="1.65 0.25 0.2" text="value: Cafeteria; color: #000" scale="4 4 4" hotpoint="room:img/Cafeteria/GS__0100.JPG"></a-entity>
+						</a-entity>
+
+						<a-entity id="B-Block-bottom" class="bottom-floor" position="1.52 0.5 0">
+							<a-entity class="interactable" position="0.1 0.25 0.1" geometry="primitive: plane; width: 0.7; height: 0.8" material="color: #FFF;" hotpoint="room:img/B-Block-bottom/GS__0089.JPG"></a-entity>
+							<a-entity class="interactable" position="1.8 0.25 0.2" text="value: B Btm; color: #000" scale="4 4 4" hotpoint="room:img/B-Block-bottom/GS__0089.JPG"></a-entity>						
+						</a-entity>
+
+						<a-entity id="Construction-Department" class="bottom-floor" position="-1.15 0.5 0">
+							<a-entity class="interactable" position="0 0.25 0.1" geometry="primitive: plane; width: 1.7; height: 0.8" material="color: #FFF;" hotpoint="room:img/Construction-Department/GS__0062.JPG"></a-entity>
+							<a-entity class="interactable" position="1.5 0.25 0.2" text="value: Construction; color: #000" scale="4 4 4" hotpoint="room:img/Construction-Department/GS__0062.JPG"></a-entity>
 						</a-entity>
 
 						<a-entity id="B-Block-top floor" class="top-floor" position="-0.8 -0.2 0" scale="0 0 0">
 							<a-entity class="interactable" position="0.1 0.25 0.1" geometry="primitive: plane; width: 1; height: 0.8" material="color: #FFF;" hotpoint="room:img/B-Block-top floor/GS__0049.JPG"></a-entity>
-						</a-entity>
-
-						<a-entity id="B-Block-bottom" class="bottom-floor" position="-0.8 -0.6 0">
-							<a-entity class="interactable" position="0.1 0.25 0.1" geometry="primitive: plane; width: 0.7; height: 0.8" material="color: #FFF;" hotpoint="room:img/B-Block-bottom/GS__0089.JPG"></a-entity>							
 						</a-entity>
 
 						<a-entity 
@@ -114,14 +122,6 @@
 							geometry="primitive: plane; width: 1.2; height: 0.3"
 							material="color: #000;" scale="0 0 0"
 							hotpoint="room:img/Computing-Department/GS__0044.JPG"
-						></a-entity>
-
-						<a-entity 
-							id="Construction-Department" class="interactable bottom-floor"
-							position="0.8 -0.6 0" text="value: Construction Dept; align: center; width: 3"
-							geometry="primitive: plane; width: 1.2; height: 0.3"
-							material="color: #000;"
-							hotpoint="room:img/Construction-Department/GS__0062.JPG"
 						></a-entity>
 						
 					</a-entity>
