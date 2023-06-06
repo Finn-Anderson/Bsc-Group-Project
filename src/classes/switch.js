@@ -43,21 +43,9 @@ AFRAME.registerComponent('switch', {
 			switchFloor();
 		}
 
-		this.hover = function() {
-			this.setAttribute("material", "color: #7655D2;");
-		}
-
-		this.unhover = function() {
-			this.setAttribute("material", "color: #000;");
-		}
-
-		this.el.addEventListener('mouseenter', this.hover);
-		this.el.addEventListener('mouseleave', this.unhover);
 		this.el.addEventListener('click', this.setSwitch);
 	},
 	remove: function() {
 		this.el.removeEventListener('click', this.setNav);
-		this.el.removeEventListener('mouseenter', this.hover);
-		this.el.removeEventListener('mouseleave', this.unhover);
 	}
 })
