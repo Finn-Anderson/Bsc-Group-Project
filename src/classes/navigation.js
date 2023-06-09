@@ -12,7 +12,7 @@ AFRAME.registerComponent('nav', {
 	init: function() {
 		var command = this.data.cmd;
 
-		var dropdown = document.querySelector('#dropdown');
+		var dropdown = document.getElementById("dropdown");
 		var locationImg = document.getElementById("locationImg");
 
 		function displayNav() {
