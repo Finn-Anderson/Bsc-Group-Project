@@ -1,7 +1,7 @@
 /*
 	Project: WebXR VR Tour
 	Author: Bsc Team Project Group 2023
-	Description: Info point card display
+	Description: Switch between floors
 */
 
 AFRAME.registerComponent('switch', {
@@ -46,6 +46,6 @@ AFRAME.registerComponent('switch', {
 		this.el.addEventListener('click', this.setSwitch);
 	},
 	remove: function() {
-		this.el.removeEventListener('click', this.setNav);
+		this.el.removeEventListener('click', this.setSwitch);
 	}
 })

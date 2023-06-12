@@ -12,23 +12,34 @@ AFRAME.registerComponent('info', {
 	init: function() {
 		var command = this.data.cmd;
 
-		function displayInfo(hotpoint) {
-			hotpoint.setAttribute("scale", "10 10 10");
+		var anim;
+		var element;
 
-			hotpoint.previousElementSibling.setAttribute("scale", "0 0 0");
+		this.el.addEventListener("loaded", evt => {
+			if (command == "open") {
+				element = this.el.nextElementSibling;
+			} else if (command == "close") {
+				element = this.el.parentElement;
+			}
+
+			anim = element.components["animate"];
+		})
+
+		function displayInfo() {
+			element.previousElementSibling.setAttribute("scale", "0 0 0");
+			anim.show();
 		}
 
-		function hideInfo(hotpoint) {
-			hotpoint.setAttribute("scale", "0 0 0");
-
-			hotpoint.previousElementSibling.setAttribute("scale", "1 1 1");
+		function hideInfo() {
+			element.previousElementSibling.setAttribute("scale", "1 1 1");
+			anim.hide();
 		}
 
 		this.setInfo = function() {
-			if (command == "close") {
-				hideInfo(this.parentElement);
-			} else if (command == "open") {
-				displayInfo(this.nextElementSibling);
+			if (command == "open") {
+				displayInfo();
+			} else if (command == "close") {
+				hideInfo();
 			}
 		}
 		this.el.addEventListener('click', this.setInfo);

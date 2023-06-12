@@ -46,11 +46,16 @@ function getData(location) {
 
 					wrapper.appendChild(infopoint);
 
+					var descPos = data.infoPos[i][0] + " " + data.infoPos[i][2] + " " + (Number(data.infoPos[i][4] + data.infoPos[i][5]) - 0.1);
+
 					const infodesc = document.createElement("a-image");
 					infodesc.setAttribute("src", "#informationpointBackground");
-					infodesc.setAttribute("position", data.infoPos[i]);
+					infodesc.setAttribute("position", descPos);
 					infodesc.setAttribute("scale", "0 0 0");
 					infodesc.setAttribute("look-at", "#camera");
+					infodesc.setAttribute("animation__hide", "property: scale; to: 0 0 0; dur: 300; startEvents: hide");
+					infodesc.setAttribute("animation__show", "property: scale; to: 10 10 10; dur: 300; startEvents: show");
+					infodesc.setAttribute("animate", "");
 
 					wrapper.appendChild(infodesc);
 

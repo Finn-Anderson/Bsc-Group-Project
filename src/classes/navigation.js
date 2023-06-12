@@ -1,7 +1,7 @@
 /*
 	Project: WebXR VR Tour
 	Author: Bsc Team Project Group 2023
-	Description: Info point card display
+	Description: Navigation display
 */
 
 AFRAME.registerComponent('nav', {
@@ -12,23 +12,26 @@ AFRAME.registerComponent('nav', {
 	init: function() {
 		var command = this.data.cmd;
 
-		var dropdown = document.getElementById("dropdown");
 		var locationImg = document.getElementById("locationImg");
 
+		var anim;
+
 		function displayNav() {
-			dropdown.setAttribute("scale", "1 1 1");
 			locationImg.setAttribute("scale", "0 0 0");
+			anim.show();
 		}
 
 		function hideNav() {
-			dropdown.setAttribute("scale", "0 0 0");
 			locationImg.setAttribute("scale", "1 1 1");
+			anim.hide();
 		}
 
 		this.setNav = function() {
-			if (command == "close") {
-				hideNav();
-			} else if (command == "open") {
+			if (!anim) {
+				anim = document.querySelector('[animate]').components.animate;
+			} 
+
+			if (command == "open") {
 				displayNav();
 
 				var curLoc = document.querySelector('[selected]');
@@ -43,6 +46,8 @@ AFRAME.registerComponent('nav', {
 					switchFloor.setAttribute("topFloor", true);
 					switchFloor.click();
 				}
+			} else if (command == "close") {
+				hideNav();
 			}
 		}
 		this.el.addEventListener('click', this.setNav);
