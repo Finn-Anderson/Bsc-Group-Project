@@ -13,8 +13,13 @@ AFRAME.registerComponent('nav', {
 		var command = this.data.cmd;
 
 		var locationImg = document.getElementById("locationImg");
+		var dropdown = document.getElementById("dropdown");
 
 		var anim;
+
+		dropdown.addEventListener("loaded", evt => {
+			anim = dropdown.components["animate"];
+		})
 
 		function displayNav() {
 			locationImg.setAttribute("scale", "0 0 0");
@@ -27,10 +32,6 @@ AFRAME.registerComponent('nav', {
 		}
 
 		this.setNav = function() {
-			if (!anim) {
-				anim = document.querySelector('[animate]').components.animate;
-			} 
-
 			if (command == "open") {
 				displayNav();
 
