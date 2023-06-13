@@ -1,46 +1,73 @@
 /*
 	Project: WebXR VR Tour
 	Author: Bsc Team Project Group 2023
-	Description: Info point card display
+	Description: Tooltip display
 */
 
 AFRAME.registerComponent('tooltip', {
 	init: function() {
 		var timer;
-		var element = this.el;
-		var clicked = false;
+		this.clicked = false;
+		this.hover = false;
 
-		this.el.addEventListener("mouseenter", (e) => {
-			timer = setTimeout(function() {
-				if (element.getAttribute("visible") == true && !clicked) {
-					var tooltip = document.createElement("a-entity");
-					tooltip.setAttribute("id", "tooltip");
-					tooltip.setAttribute("text", "value: Click to interact.");
-					tooltip.setAttribute("position", "1.65 -0.75 0");
-					tooltip.setAttribute("scale", "5 5 5");
+		const canvas = document.querySelector("canvas");
 
-					element.appendChild(tooltip);
-				}
-			}, 1000);
-		});
+		document.addEventListener('mouseenter', (e) => {
+			const list = e.target.classList;
+			if (list && list.contains("interactable")) {
+				timer = setTimeout( () => {
+					this.hover = true;
 
-		this.clear = function() {
-			var tooltip = document.getElementById("tooltip");
-
-			if (tooltip) {
-				tooltip.remove();
+					const self = document.querySelector('[tooltip]').components.tooltip;
+					self.attachToCursor(e);
+				}, 600);
 			}
-			
-			clearTimeout(timer);
-		}
-
-		this.el.addEventListener('mouseleave', this.clear);
-		this.el.addEventListener('click', (e) => {
-			clicked = !clicked;
-			this.clear();
 		});
+
+		document.addEventListener('mouseleave', (e) => {
+			const list = e.target.classList;
+			if (list && list.contains("interactable")) {
+				this.el.setAttribute("scale", "0 0 0");
+				this.hover = false;
+				clearTimeout(timer);
+			}
+		});
+
+		document.addEventListener('click', (e) => {
+			clearTimeout(timer);
+
+			$(".interactable").trigger("mouseenter");
+		});
+
+		canvas.addEventListener("mousemove", this.attachToCursor.bind(this));
 	},
 	remove: function() {
-		this.el.removeEventListener('click', this.clear);
+		this.el.removeEventListener('click', this);
+	},
+	attachToCursor: function(e) {
+		if (e.clientX) {
+			this.e = e;
+		} else {
+			e = this.e
+		}
+		if (this.hover) {
+			const width = e.target.offsetWidth;
+			const height = e.target.offsetHeight;
+
+			const rect = e.target.getBoundingClientRect();
+			const x = e.clientX - rect.left;
+			const y = e.clientY - rect.top;
+
+			const xRatio = x / width;
+			const yRatio = y / height;
+
+			const posX = (1 * xRatio) + (-1 * (1 - xRatio)) + 0.25;
+			const posY = ((-1 * yRatio) + (1 * (1 - yRatio))) * 0.8 - 0.1;
+
+			const pos = posX + " " + posY + " -0.8";
+
+			this.el.setAttribute("position", pos);
+			this.el.setAttribute("scale", "0.7 0.7 0.7");
+		}
 	}
 })

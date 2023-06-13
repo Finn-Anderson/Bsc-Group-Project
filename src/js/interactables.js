@@ -27,7 +27,6 @@ function getData(location) {
 					hotpoint.setAttribute("hotpoint", "room:" + data.hpImg[i]);
 					hotpoint.setAttribute("position", data.hpPos[i]);
 					hotpoint.setAttribute("rotation", data.hpRot[i]);
-					hotpoint.setAttribute("tooltip", "");
 
 					root.appendChild(hotpoint);
 				}
@@ -42,7 +41,6 @@ function getData(location) {
 					infopoint.setAttribute("position", data.infoPos[i]);
 					infopoint.setAttribute("look-at", "#camera");
 					infopoint.setAttribute("info", "cmd:open");
-					infopoint.setAttribute("tooltip", "");
 
 					wrapper.appendChild(infopoint);
 
@@ -84,7 +82,6 @@ function getData(location) {
 					closeBtn.setAttribute("position", "0.43 0.43 0.01");
 					closeBtn.setAttribute("scale", "0.06 0.06 0.06");
 					closeBtn.setAttribute("info", "cmd:close");
-					closeBtn.setAttribute("tooltip", "");
 
 					infodesc.appendChild(closeBtn);
 				}
