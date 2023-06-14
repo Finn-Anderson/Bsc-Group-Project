@@ -58,16 +58,28 @@ AFRAME.registerComponent('tooltip', {
 			const x = e.clientX - rect.left;
 			const y = e.clientY - rect.top;
 
-			const xRatio = x / width;
-			const yRatio = y / height;
+			var fov = document.querySelector("[camera]").getAttribute("camera").fov;
+			fov /= 90;
 
-			const posX = (1 * xRatio) + (-1 * (1 - xRatio)) + 0.25;
-			const posY = ((-1 * yRatio) + (1 * (1 - yRatio))) * 0.8 - 0.1;
+			const percX = x / width;
+			const percY = y / height;
+			const d = 1 * fov;
+			const border = d - (d * 0.15);
+
+			var posX = (d * percX) + (-d * (1 - percX));
+			posX = Math.min(Math.max(posX, -border), border);
+			posX = posX * Math.min(Math.max(fov * 1.3, 0.8), 1) + (0.2425 * fov);
+
+			var posY = (-d * percY) + (d * (1 - percY));
+			posY = Math.min(Math.max(posY, -(border - (d * 0.1))), border);
+			var posY = posY * Math.min(Math.max(fov, 0.6), 0.8) - (0.1 * fov);
 
 			const pos = posX + " " + posY + " -0.8";
 
+			const scale = 0.7 * fov;
+
 			this.el.setAttribute("position", pos);
-			this.el.setAttribute("scale", "0.7 0.7 0.7");
+			this.el.setAttribute("scale", scale + " " + scale + " " + scale);
 		}
 	}
 })
