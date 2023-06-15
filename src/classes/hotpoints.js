@@ -14,15 +14,17 @@ AFRAME.registerComponent('hotpoint', {
 
 		this.setSky = function() {
 			var sky = document.querySelector('#img-360');
-			sky.emit("hide");
+			if (sky.getAttribute("src") != newSky) {
+				sky.emit("hide");
 						
-			const root = document.getElementById("blocks");
-			root.innerHTML = "";
+				const root = document.getElementById("blocks");
+				root.innerHTML = "";
 
-			const loading = document.getElementById("loading");
-			loading.setAttribute("visible", true);
+				const loading = document.getElementById("loading");
+				loading.setAttribute("visible", true);
 
-			getData(newSky);
+				getData(newSky);
+			}
 		}
 
 		this.el.addEventListener('click', this.setSky);
