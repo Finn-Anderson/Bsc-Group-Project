@@ -76,16 +76,19 @@ AFRAME.registerComponent('nav', {
 				}
 			}
 
-			newLoc.setAttribute("selected");
-			var newChilds = newLoc.children;
+			if (newLoc) {
+				newLoc.setAttribute("selected");
+				var newChilds = newLoc.children;
 
-			for (const el of newChilds) {
-				if (!el.nextElementSibling) {
-					el.setAttribute("text", "color: #FFF");
-				} else {
-					el.setAttribute("material", "color: #7655D2");
+				for (const el of newChilds) {
+					if (!el.nextElementSibling) {
+						el.setAttribute("text", "color: #FFF");
+					} else {
+						el.setAttribute("material", "color: #7655D2");
+					}
 				}
 			}
+			
 		}
 	}
 })
