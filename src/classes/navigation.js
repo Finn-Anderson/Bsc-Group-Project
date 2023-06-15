@@ -38,14 +38,12 @@ AFRAME.registerComponent('nav', {
 				var curLoc = document.querySelector('[selected]');
 				var name = curLoc.className;
 
-				var switchFloor = document.getElementById("switch");
+				var switchFloor = document.getElementsByClassName("switch");
 
 				if (name == "top-floor") {
-					switchFloor.setAttribute("topFloor", false);
-					switchFloor.click();
+					switchFloor[0].click();
 				} else {
-					switchFloor.setAttribute("topFloor", true);
-					switchFloor.click();
+					switchFloor[1].click();
 				}
 			} else if (command == "close") {
 				hideNav();

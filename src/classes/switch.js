@@ -6,10 +6,12 @@
 
 AFRAME.registerComponent('switch', {
 	schema: {
-		cmd:{type:"string",default:""},
+		topFloor:{type:"string",default:""},
 	},
 
 	init: function() {
+		var topFloor = this.data.topFloor;
+
 		var bottom = document.getElementsByClassName("bottom-floor");
 		var top = document.getElementsByClassName("top-floor");
 
@@ -27,12 +29,18 @@ AFRAME.registerComponent('switch', {
 		}
 
 		this.setSwitch = function() {
-			var topFloor = (this.getAttribute("topFloor") === "true");
-			topFloor = !topFloor;
+			const elements = document.getElementsByClassName("switch");
 
-			this.setAttribute("topFloor", topFloor);
+			for (var i = 0; i < elements.length; i++) {
+				if (elements[i] == this) {
+					elements[i].setAttribute("material", "color: #7655D2");
+					elements[i].setAttribute("hover", "colour: #7655D2");
+				} else {
+					elements[i].setAttribute("material", "color: #000");
+				}
+			}
 
-			if (topFloor) {
+			if (topFloor == "true") {
 				bottomVal = "0 0 0";
 				topVal = "1 1 1";
 			} else {
